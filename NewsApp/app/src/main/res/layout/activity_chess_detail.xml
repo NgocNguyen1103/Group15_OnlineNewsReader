@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:id="@+id/hotnews2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Danh mục tin tức -->
+        <TextView
+            android:id="@+id/news_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:color="@color/white"
+            android:text="Thế giới"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#d32f2f"
+            android:paddingBottom="4dp" />
+
+        <!-- Thời gian đăng bài -->
+        <TextView
+            android:id="@+id/news_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:color="@color/white"
+
+            android:text="Thứ tư, 4/9/2024, 21:08 (GMT+7)"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingBottom="8dp" />
+
+        <!-- Tiêu đề bài viết -->
+        <TextView
+            android:textColor="@color/white"
+
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đại kiện tướng Magnus Carlsen chuẩn bị cho giải đấu thế giới "
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:paddingBottom="8dp" />
+
+        <!-- Hình ảnh (nếu có) -->
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/magnus_detail"
+            android:paddingBottom="30dp" />
+
+
+        <TextView
+            android:id="@+id/paragraph1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnus đã dành nhiều thời gian để tập luyện chiến thuật mới. Anh không chỉ chú trọng vào các phương án phòng thủ mà còn tìm kiếm những cơ hội tấn công sắc bén để tạo đột phá trong các ván đấu quyết định. Magnus luôn được giới chuyên môn đánh giá cao trong mọi giải đấu mà anh tham gia."
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="12dp" /> <!-- Tạo khoảng cách sau đoạn văn này -->
+
+        <TextView
+            android:id="@+id/paragraph2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trong giải đấu lần này, Magnus sẽ đối đầu với những đối thủ mạnh đến từ nhiều quốc gia khác nhau, đặc biệt là những kỳ thủ có khả năng chơi tấn công mạnh mẽ. "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/paragraph3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trong một cuộc phỏng vấn gần đây, Magnus chia sẻ: Tôi luôn tìm cách cải thiện bản thân, không chỉ trong cách nhìn nhận về cờ vua mà còn trong cách tôi tiếp cận mọi trận đấu."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:paddingBottom="12dp" />
+        <!-- Tên tác giả -->
+        <TextView
+            android:id="@+id/news_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Nhóm Phóng Viên"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:paddingTop="8dp"
+            android:paddingBottom="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/btn_send_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <!-- Phần Text "Gửi ý kiến" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gửi ý kiến"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <!-- Icon mũi tên -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@drawable/arrow_right"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vid1_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vid1_detailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/frame_video">
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:id="@+id/video_view" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10.5dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/text"
+            tools:ignore="InvalidId">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="Hanoians run for dear life as Red River water levels rise"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intro"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Water levels in the Red River continued to rise at 11 a.m. The water flooded the floodplain, threatening residential areas in downtown Hoan Kiem District's Chuong Duong Ward.\nWater levels in the Red River were at 9.5 m on Tuesday morning, according to the National Center for Hydro-Meteorological Forecasting. Within the next 24 hours, water levels could rise to 10.5 m."
+                />
+
+            <TextView
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:id="@+id/upload_time"
+                android:textColor="#AAA9A9"
+                android:text="September 10, 2024 | 04:15 pm GMT+7 | Life" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="end"
+                android:text="Giang Huy, Van Phu, Pham Ngoc"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="#d3d3d3"
+                />
+
+            <TextView
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comment"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/Comment_Bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Send your comment"
+                android:inputType="text"
+                android:background="@drawable/rounded_bar"
+                android:paddingLeft="19dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Video1Fragment"
+    android:id="@+id/video1_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10.5dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:id="@+id/thumb"
+            android:src="@drawable/hanoi_flood"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/play" />
+
+            <TextView
+                android:fontFamily="sans-serif-condensed-light"
+                android:id="@+id/authors"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="By Giang Huy, Van Phu, Pham Ngoc"
+                android:textColor="#AAA9A9"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Hanoians run for dear life as Red River water levels rise"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/intro"
+            android:textSize="19dp"
+            android:text="Water in the Red River reached the highest levels over the last 16 years, forcing Hanoians to evacuate starting Monday night."
+            />
+
+        <TextView
+            android:fontFamily="sans-serif-condensed-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:id="@+id/upload_time"
+                android:textColor="#AAA9A9"
+                android:text="September 10, 2024 | 04:15 pm GMT+7 | Life" />
+
+    </LinearLayout>
+
+</FrameLayout>
