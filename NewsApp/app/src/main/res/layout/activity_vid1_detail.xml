@@ -5,7 +5,7 @@
     android:id="@+id/vid1_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vid1_detailActivity">
+    tools:context=".ngoc_works.vid1_detailActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

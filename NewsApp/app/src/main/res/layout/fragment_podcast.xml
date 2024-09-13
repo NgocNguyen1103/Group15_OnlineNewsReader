@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ca70fe"
-    tools:context=".PodcastFragment">
+    tools:context=".phuong_works.PodcastFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

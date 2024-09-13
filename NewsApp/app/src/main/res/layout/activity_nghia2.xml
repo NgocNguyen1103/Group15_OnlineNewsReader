@@ -5,7 +5,7 @@
     android:id="@+id/setting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nghia2Activity">
+    tools:context=".nghia_works.Nghia2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
