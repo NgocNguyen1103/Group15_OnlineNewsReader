@@ -10,33 +10,34 @@
     <androidx.fragment.app.FragmentContainerView
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
         <fragment
             android:id="@+id/info"
-            android:name= "vn.edu.usth.newsreader.nghia_works.Nghiafrag1"
-            android:layout_width="match_parent"
+            android:name= "vn.edu.usth.newsreader.nghia_works.Frag_info"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"/>
 
         <fragment
             android:layout_marginTop="190dp"
             android:id="@+id/setting"
-            android:name="vn.edu.usth.newsreader.nghia_works.Nghiafrag2"
-            android:layout_width="match_parent"
+            android:name="vn.edu.usth.newsreader.nghia_works.Frag_setting"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <fragment
             android:layout_marginTop="260dp"
             android:id="@+id/late"
-            android:name="vn.edu.usth.newsreader.nghia_works.Nghiafrag3"
-            android:layout_width="match_parent"
+            android:name="vn.edu.usth.newsreader.nghia_works.Frag_late"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <fragment
             android:layout_marginTop="330dp"
             android:id="@+id/ext"
-            android:name="vn.edu.usth.newsreader.nghia_works.Nghiafrag4"
-            android:layout_width="match_parent"
+            android:name="vn.edu.usth.newsreader.nghia_works.Frag_ext"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 

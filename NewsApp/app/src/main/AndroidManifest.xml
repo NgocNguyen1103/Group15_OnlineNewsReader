@@ -22,16 +22,16 @@
             android:name=".duy_works.ChessDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".nghia_works.Nghia4Activity"
+            android:name=".nghia_works.Activity_ext"
             android:exported="false" />
         <activity
-            android:name=".nghia_works.Nghia3Activity"
+            android:name=".nghia_works.Activity_late"
             android:exported="false" />
         <activity
-            android:name=".nghia_works.Nghia2Activity"
+            android:name=".nghia_works.Activity_setting"
             android:exported="false" />
         <activity
-            android:name=".nghia_works.Nghia1Activity"
+            android:name=".nghia_works.Activity_info"
             android:exported="false" />
         <activity
             android:name=".duc_works.Opinion3_detailActivity"

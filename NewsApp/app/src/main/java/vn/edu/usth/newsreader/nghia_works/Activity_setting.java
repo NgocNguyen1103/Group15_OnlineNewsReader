@@ -7,13 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.newsreader.R;
 
-public class Nghia3Activity extends AppCompatActivity {
+public class Activity_setting extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_nghia3);
+        setContentView(R.layout.activity_setting_noti);
 
     }
 }

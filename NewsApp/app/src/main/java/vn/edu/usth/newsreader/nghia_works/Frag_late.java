@@ -12,7 +12,7 @@ import vn.edu.usth.newsreader.R;
 
 
 
-public class Nghiafrag3 extends Fragment {
+public class Frag_late extends Fragment {
 
 
     @Override
@@ -20,11 +20,11 @@ public class Nghiafrag3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_nghiafrag3, container, false);
-        View view = inflater.inflate(R.layout.fragment_nghiafrag3, container, false);
+        View view = inflater.inflate(R.layout.fragment_frag_late, container, false);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Nghia3Activity.class);
+                Intent intent = new Intent(getActivity(), Activity_late.class);
                 startActivity(intent);
             }
         });

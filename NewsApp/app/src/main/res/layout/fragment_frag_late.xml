@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nghia_works.Nghiafrag4">
+    tools:context=".nghia_works.Frag_late">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:background="@drawable/nghiablockchain">
+            android:background="@drawable/nghiaclock">
 
         </ImageView>
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:paddingLeft="10dp"
-            android:text="Extension"
+            android:text="Watch later"
             android:textSize="20dp">
 
         </TextView>

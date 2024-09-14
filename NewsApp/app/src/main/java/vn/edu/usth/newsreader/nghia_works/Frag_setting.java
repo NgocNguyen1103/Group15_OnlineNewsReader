@@ -11,12 +11,7 @@ import androidx.fragment.app.Fragment;
 import vn.edu.usth.newsreader.R;
 
 
-public class Nghiafrag1 extends Fragment {
-
-
-    public Nghiafrag1() {
-        // Required empty public constructor
-    }
+public class Frag_setting extends Fragment {
 
 
 
@@ -24,12 +19,12 @@ public class Nghiafrag1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_nghiafrag1, container, false);
-        View view = inflater.inflate(R.layout.fragment_nghiafrag1, container, false);
+        //return inflater.inflate(R.layout.fragment_nghiafrag2, container, false);
+        View view = inflater.inflate(R.layout.fragment_frag_setting, container, false);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Nghia1Activity.class);
+                Intent intent = new Intent(getActivity(), Activity_setting.class);
                 startActivity(intent);
             }
         });
