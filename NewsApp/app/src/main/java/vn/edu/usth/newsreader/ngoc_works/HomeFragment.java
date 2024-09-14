@@ -1,5 +1,7 @@
 package vn.edu.usth.newsreader.ngoc_works;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -19,6 +22,7 @@ import vn.edu.usth.newsreader.R;
 import vn.edu.usth.newsreader.duc_works.OpinionFragment;
 import vn.edu.usth.newsreader.duc_works.PerspectiveFragment;
 import vn.edu.usth.newsreader.duy_works.HotNewsFragment;
+import vn.edu.usth.newsreader.phuong_works.Notification_activity;
 
 
 public class HomeFragment extends Fragment {
@@ -57,12 +61,36 @@ public class HomeFragment extends Fragment {
         TabLayout tabLayout = view.findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(pager);
 
+        ImageView notification = view.findViewById(R.id.notifications);
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Notification_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView icon_Popup = view.findViewById(R.id.icon_popup);
+
+        icon_Popup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Hiển thị pop-up khi nhấn vào icon
+                showPopup();
+            }
+        });
+
 
         return view;
         // Inflate the layout for this fragment
 //
 //        return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+    private void showPopup() {
+        Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.fragment_popup_layout);
 
+        dialog.show();
     }
 
     public class HomePagerAdapter extends FragmentPagerAdapter {
