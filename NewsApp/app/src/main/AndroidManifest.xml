@@ -19,8 +19,7 @@
             android:name=".duc_works.ActivityBao2"
             android:exported="false" />
         <activity
-            android:name=".duc_works.ActivityBao3"
-            android:exported="false" />
+            android:name=".duc_works.ActivityBao3" />
         <activity
             android:name=".duy_works.LolDetailActivity"
             android:exported="false" />

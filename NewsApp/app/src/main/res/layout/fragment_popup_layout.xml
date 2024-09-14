@@ -7,7 +7,6 @@
     android:background="#FFFFFF"
     android:elevation="4dp">
 
-    <!-- Thanh chọn kích cỡ chữ -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +17,7 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/baseline_font_download_24" />
+            android:src="@drawable/font_size" />
 
         <SeekBar
             android:id="@+id/font_size_seekbar"
@@ -31,10 +30,9 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/baseline_font_download_24" />
+            android:src="@drawable/font_size" />
     </LinearLayout>
 
-    <!-- Bật tắt ảnh bài viết -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +44,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ảnh bài viết"
+            android:text="Image"
             android:fontFamily="sans-serif-condensed-light"
             android:textSize="20dp" />
 
@@ -56,7 +54,6 @@
             android:layout_height="48dp" />
     </LinearLayout>
 
-    <!-- Chế độ nền tối -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Chế độ tối"
+            android:text="Dark mode"
             android:fontFamily="sans-serif-condensed-light"
             android:textSize="20dp" />
 
@@ -81,7 +78,7 @@
                 android:id="@+id/radio_dark_mode_on"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bật"
+                android:text="On"
                 android:textSize="20dp"
                 android:fontFamily="sans-serif-condensed-light"/>
 
@@ -91,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-light"
                 android:textSize="20dp"
-                android:text="Tắt" />
+                android:text="Off" />
 
             <RadioButton
                 android:id="@+id/radio_dark_mode_system"
@@ -99,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-light"
                 android:textSize="20dp"
-                android:text="Hệ thống" />
+                android:text="System" />
         </RadioGroup>
     </LinearLayout>
 </LinearLayout>
