@@ -30,8 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:paddingLeft="30dp"
-            android:text="Nguyen Van"
-            android:textSize="30dp">
+            android:text="Nguyen Van B">
+
 
         </TextView>
 
