@@ -13,8 +13,13 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31">
         <activity
-            android:name=".phuong_works.Notification_activity"
+            android:name=".duc_works.ActivityBao1"
             android:exported="false" />
+        <activity
+            android:name=".duc_works.ActivityBao2"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.ActivityBao3" />
         <activity
             android:name=".duy_works.LolDetailActivity"
             android:exported="false" />

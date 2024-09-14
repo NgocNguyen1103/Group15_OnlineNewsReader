@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Chuyên mục -->
+        <TextView
+            android:id="@+id/article_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perspectives"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+
+        <!-- Thời gian đăng bài -->
+        <TextView
+            android:id="@+id/article_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday, August 28, 2024, 06:27 (GMT+7)"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="8dp"/>
+
+        <!-- Tiêu đề bài viết -->
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When social media becomes third person in relationships."
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+
+
+        <!-- Nội dung bài viết (Đoạn 1) -->
+        <TextView
+            android:id="@+id/article_paragraph_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I recently lost a friend because of social media. We had been close since we were toddlers, enduring hardships and supporting each other through various life challenges. We used to spend hours talking tirelessly. However, our connection began to fade. When we spent time together, my friend was more focused on her phone than on our conversation. Our interactions became less engaging and less frequent."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 2) -->
+        <TextView
+            android:id="@+id/article_paragraph_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our generation, born in the 1970s and 1980s, has witnessed significant changes in Vietnam, from the hardships of the centralized economy to the prosperity of the open market, from handwritten letters that took weeks to arrive to digital emails that take seconds. Throughout our lives, countless relationships have begun and ended."
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 3) -->
+        <TextView
+            android:id="@+id/article_paragraph_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our class still kept in touch and supported each other decades after our graduation. But at recent gatherings, the gap between us became more apparent. That day, most of the 20 attendees were absorbed in their phones: taking photos, sharing them on social media, and waiting for likes and comments from their digital friends. I ended up having the most conversation with a classmate's child, the only one without a phone. 'It’s the same at home; my mom always stares at her phone. She doesn’t play with me,' the child said, pouting in a corner."
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 4) -->
+        <TextView
+            android:id="@+id/article_paragraph_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="I was struck by the child’s comment. Spending time with parents is a dream for many children today. As phones become smarter and social media connects people more effectively online, they have ironically driven wedges between family members. Parents might spend more time on their phones than with their children. Some adults spend entire days glued to their screens; some for work, but much of it for the addictive scroll of social media. Many begin their days by updating their digital friends about their night’s sleep instead of greeting their families. These same adults often become agitated when their children use phones in a similar manner. In many families, phones and Internet-connected TVs have become artificial nannies, leaving children vulnerable to influence by digital content creators who may encourage risky or harmful behaviors. At school, teachers sometimes have to confiscate children’s phones, which can lead to resentment. Some children even develop negative attitudes toward their teachers, the schools and studying, just because of their attachment to their phones."
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="20dp" />
+
+        <!-- Nội dung bài viết (Đoạn 5) -->
+        <TextView
+            android:id="@+id/article_paragraph_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phones also strain family happiness. Many couples spend less time talking to each other and more time scrolling through their devices, leading to a gradual decline in their relationship. This issue isn’t confined to personal spaces. I once worked for a major corporation with strict rules against using phones in meetings. One day, a manager, who is highly capable and with decades of service, checked her phone for less than a minute during a meeting. Later that afternoon, the entire company received an email announcing her dismissal. A momentary lapse with her phone erased decades of contributions. How have phones come to have such a profound impact on society? The simple answer is that we, as a society, allow it. Even though we understand the detrimental effects, many of us compromise our true interests and satisfaction, now closely linked to social media."
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 6) -->
+        <TextView
+            android:id="@+id/article_paragraph_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Some people justify their phone attachment as work-related but fail to distinguish between work and life, neglecting time with loved ones. Many of us now feel intense anxiety if we leave home without our phones. There’s even a term for this: nomophobia, the fear of being without mobile phone connectivity. A major factor in the addictive nature of digitalization and global connectivity is the endless production of engaging digital content by billions of creators. There's always something new and attractive to consume"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="20dp" />
+
+        <!-- Nội dung bài viết (Đoạn 7) -->
+        <TextView
+            android:id="@+id/article_paragraph_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Research has examined social media's impact on family happiness. Worldmetrics, a global data aggregator, reported in July 2024 that 20% of divorces in the U.S. are directly caused by social media conflicts, while 60% of couples have had arguments over social media matters. No study can fully capture the devastating impact of digitalization and social media on human connections, which often becomes apparent only when it's too late."
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="20dp" />
+
+        <!-- Nội dung bài viết (Đoạn 8) -->
+        <TextView
+            android:id="@+id/article_paragraph_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="In the end, life is a battle against our weaknesses, selfishness and laziness. If we refuse to be enslaved by our phones and social media, the Internet can remain a tool, not a master. Whenever possible, have face-to-face conversations with your loved ones. In every family, prioritize spending time together over time spent on phones or social media. *Trinh Hang is a documentary director."
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="20dp" />
+
+
+        <!--Tên tác giả-->
+        <TextView
+            android:id="@+id/news_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingTop="8dp"
+            android:paddingBottom="20dp"
+            android:text="Trinh Hang - Documentary director"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
