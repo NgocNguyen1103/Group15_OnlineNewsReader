@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
