@@ -23,7 +23,7 @@
             android:id="@+id/article_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday, September 3, 2024, 07:00 (GMT+7)"
+            android:text="Monday, September 9, 2024, 11:23 (GMT+7)"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray"
             android:paddingBottom="8dp"/>
@@ -33,7 +33,7 @@
             android:id="@+id/article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vietnamese are working too many hours."
+            android:text="I'm sick of graduates not knowing how to write emails."
             android:textSize="30dp"
             android:fontFamily="sans-serif-black"
             android:textStyle="bold"
@@ -45,7 +45,7 @@
             android:id="@+id/article_paragraph_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Readers have expressed concerns that the working conditions in Vietnam are exhausting the younger generation, calling for more and longer holidays throughout the year to enhance both physical and mental well-being. My husband and I are civil servants. We’re supposed to have two days off on weekends, but in reality, we still have to work, leaving us with almost no days off. My wife works at a land registration office, and every night she has to continue unresolved work from the office. It's really tiring for us, and we can’t properly take care of our children. We need to modernize and liberate human labor. If additional days off are granted but there’s still too much work, laborers won't be able to truly rest, shared reader Vu Hai Nam regarding the working hours in Vietnam."
+            android:text="Not to mention professional work, even simple things like printing a sheet of A4 paper or writing a simple email are something many students cannot do."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -56,7 +56,7 @@
             android:id="@+id/article_paragraph_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Current labor laws stipulate that employees should work no more than 48 hours per week, allowing employers to require workers to put in at least six days per week, eight hours per day. However, according to data from the International Labor Organization (ILO), Vietnam ranks among the countries with the highest working hours globally. In 2023, the total working hours in Vietnam (excluding holidays) reached 2,320 hours—440 hours more than Indonesia, 184 hours more than Cambodia, and 176 hours more than Singapore."
+            android:text="This year, the whole country has over 122,000 candidates dropping out of university, and next year there will probably be even more. These are very worrying numbers for the country's education sector. Whether or not a university degree has lost its value is reflected in specific statistics, but I am not able to assess it."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -67,19 +67,21 @@
             android:id="@+id/article_paragraph_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Commenting on the pressures faced by Vietnamese workers, reader Hung Minh said: 'More than a decade ago, when I was single, I used to work 14 hours a day, including Saturdays. I was young and enthusiastic, so I worked a lot and earned a lot. But when I started a family and had children, I had to say goodbye to that work intensity'. Reader Mirae added, 'People often cite low labor productivity in Vietnam as a reason against reducing working hours. But having worked with companies in Japan, Italy, and Korea, I’ve found that increasing labor productivity relies heavily on automation, not longer working hours. No one wants to work up to 12 hours a day.' "
+            android:text="I just find it very difficult to understand why students study for four or five years, spending about 500 million VND, but when they graduate they cannot do the job in their field, and have to do something other than what they were trained for? Then when they go to work, businesses have to train them from scratch. That is very unreasonable, wasting their families' time and money."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
             android:paddingBottom="8dp"/>
 
         <!-- Nội dung bài viết (Đoạn 4) -->
+
+
         <TextView
             android:id="@+id/article_paragraph_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text=" Reader Vu noted, 'Office workers like me actually work beyond office hours. Even when I go to shower, I have to take my phone to respond to potential work messages. Phone alerts have become a source of stress for me, and deadlines are overflowing. Besides, each worker nowadays needs to find time to upgrade their skills to stay competitive. We’re in a period where young people are physically and mentally exhausted. It’s crucial for management agencies to conduct systematic and comprehensive research to improve the working environment.' "
+            android:text="This is a common situation for many students after graduation. I do not understand what universities have taught them? Is it possible that the curriculum of the schools is not keeping up with the current professional requirements of companies, so after graduation, students do not know how to work. Or is it that schools teach one way, but companies work in a different way, leading to the expertise of the students graduating not meeting the requirements? "
             android:textColor="@android:color/black"
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"/>
@@ -89,7 +91,29 @@
             android:id="@+id/article_paragraph_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reader Kid expressed frustration, saying, 'I find it hard to understand some people’s argument that Vietnamese must work more to escape poverty. They fail to grasp that income is directly proportional to labor productivity, and productivity is greatly influenced by physical and mental health. The only way to improve these factors is to give workers more rest time. The number of holidays in Vietnam is currently among the lowest in the region and the world, far behind countries like Japan, Korea, and Germany, resulting in one of the highest numbers of working days. I strongly support the idea of more holidays. Ideally, there should be a vacation of about a week every three months, which would stimulate demand and give workers time to recuperate, ultimately boosting labor productivity.'"
+            android:text="Here, I'm not talking about job expertise, something as simple as how to print a sheet of A4 paper that many students don't know, or how to write a simple email... Companies that hire new graduates have to train them from the most basic things for many months, but they can't keep up with the work and have to quit. Many companies in Vietnam complain about the quality of graduates, not just one or two. Currently, many places are always in need of recruiting qualified personnel, but they still have difficulty recruiting enough despite the number of unemployed students increasing steadily each year. Even foreign experts say that Vietnamese students get excellent degrees but when they enter the real world, they cannot do the job."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 6) -->
+        <TextView
+            android:id="@+id/article_paragraph_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I think the education sector needs to look directly at this reality to make adjustments. Anything that is not suitable must be changed to adapt to the situation. If we continue to be conservative, when will our country's education improve? Universities collect a lot of tuition fees from students to train them, but many of them do not know what to do after graduation. That is the big responsibility of universities. If we say that schools only teach students theory and thinking, but do not focus on teaching practical work, if the university programs are that easy, then the tuition fees should be low."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 7) -->
+        <TextView
+            android:id="@+id/article_paragraph_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text= "School is now also a profession. If the quality of output products is reflected negatively by many people, then that school must seriously review the way it imparts knowledge to its students to see if it is appropriate and closely related to the professional requirements of today's society. If it is not appropriate, schools must have a receptive spirit and cooperate with businesses to change. Only then will the future of education develop, otherwise there will be many more students dropping out of university in the future."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -103,9 +127,9 @@
             android:layout_gravity="end"
             android:paddingTop="8dp"
             android:paddingBottom="20dp"
-            android:text="Vu Pham"
-            android:fontFamily="sans-serif-condensed-light"
+            android:text="Le Pham"
             android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed-light"
             android:textSize="16sp"
             android:textStyle="italic"/>
 

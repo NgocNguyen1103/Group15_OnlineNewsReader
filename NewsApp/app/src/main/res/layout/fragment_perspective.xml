@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".duc_works.PerspectiveFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- fragment 1 social media -->
+    <FrameLayout
+        android:id="@+id/id_bao1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+    <!-- fragment 2 traffic  -->
+    <FrameLayout
+        android:id="@+id/id_bao2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- fragment 3 foreign language-->
+    <FrameLayout
+        android:id="@+id/id_bao3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

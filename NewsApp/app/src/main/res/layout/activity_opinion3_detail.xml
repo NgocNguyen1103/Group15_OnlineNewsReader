@@ -23,7 +23,7 @@
             android:id="@+id/article_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday, September 3, 2024, 07:00 (GMT+7)"
+            android:text="Monday, September 9, 2024, 07:46 (GMT+7)"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray"
             android:paddingBottom="8dp"/>
@@ -33,7 +33,7 @@
             android:id="@+id/article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vietnamese are working too many hours."
+            android:text="Floods ravage Vietnam's northern highlands in wake of typhoon Yagi."
             android:textSize="30dp"
             android:fontFamily="sans-serif-black"
             android:textStyle="bold"
@@ -45,7 +45,7 @@
             android:id="@+id/article_paragraph_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Readers have expressed concerns that the working conditions in Vietnam are exhausting the younger generation, calling for more and longer holidays throughout the year to enhance both physical and mental well-being. My husband and I are civil servants. We’re supposed to have two days off on weekends, but in reality, we still have to work, leaving us with almost no days off. My wife works at a land registration office, and every night she has to continue unresolved work from the office. It's really tiring for us, and we can’t properly take care of our children. We need to modernize and liberate human labor. If additional days off are granted but there’s still too much work, laborers won't be able to truly rest, shared reader Vu Hai Nam regarding the working hours in Vietnam."
+            android:text="Wind patterns from typhoon Yagi triggered heave rains that caused devastating floods and landslides in Lao Cai, Yen Bai, Thai Nguyen and Cao Bang provinces on Monday.A corner of Trung Vuong Ward, Thai Nguyen City, the capital city of the eponymous province, is flooded on Monday morning. Thousands of people in the city had been mobilized since Sunday night to build dykes and to evacuate vulnerable residents to safer areas. Hundreds of soldiers, police officers and civilians used soil-filled bags to barricade against the water, but due to high water levels, inundations still happen in certain neighborhoods."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -56,7 +56,7 @@
             android:id="@+id/article_paragraph_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Current labor laws stipulate that employees should work no more than 48 hours per week, allowing employers to require workers to put in at least six days per week, eight hours per day. However, according to data from the International Labor Organization (ILO), Vietnam ranks among the countries with the highest working hours globally. In 2023, the total working hours in Vietnam (excluding holidays) reached 2,320 hours—440 hours more than Indonesia, 184 hours more than Cambodia, and 176 hours more than Singapore."
+            android:text="The water rose and flooded the first floor of a building in Thai Nguyen on Monday. The Thai Nguyen Steering Committee for Natural Disaster Prevention, Search and Rescue said 55 wards and communes in Thai Nguyen had been flooded, and 2,000 families had been evacuated,rising waters forced people in Vinh Quang Ward to climb to the roof."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -67,19 +67,21 @@
             android:id="@+id/article_paragraph_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Commenting on the pressures faced by Vietnamese workers, reader Hung Minh said: 'More than a decade ago, when I was single, I used to work 14 hours a day, including Saturdays. I was young and enthusiastic, so I worked a lot and earned a lot. But when I started a family and had children, I had to say goodbye to that work intensity'. Reader Mirae added, 'People often cite low labor productivity in Vietnam as a reason against reducing working hours. But having worked with companies in Japan, Italy, and Korea, I’ve found that increasing labor productivity relies heavily on automation, not longer working hours. No one wants to work up to 12 hours a day.' "
+            android:text="In Yen Bai, water levels in the Red River rose quickly, inundating several areas in the capital city. Major streets like Thanh Nien or Tran Hung Dao were up to two meters underwater. Hundreds of personnel had been dispatched Sunday night to help evacuate people and their belongings."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
             android:paddingBottom="8dp"/>
 
         <!-- Nội dung bài viết (Đoạn 4) -->
+
+
         <TextView
             android:id="@+id/article_paragraph_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text=" Reader Vu noted, 'Office workers like me actually work beyond office hours. Even when I go to shower, I have to take my phone to respond to potential work messages. Phone alerts have become a source of stress for me, and deadlines are overflowing. Besides, each worker nowadays needs to find time to upgrade their skills to stay competitive. We’re in a period where young people are physically and mentally exhausted. It’s crucial for management agencies to conduct systematic and comprehensive research to improve the working environment.' "
+            android:text="A village in Yen Bai is flooded, water rising to the roof of many houses. The National Center for Hydro-Meteorological Forecasting on Monday said wind patterns from typhoon Yagi had triggered downpours in several mountainous areas in the north from 7 p.m. Sunday to 3 a.m. Monday. Rain levels went up to 256 mm in certain locations. "
             android:textColor="@android:color/black"
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"/>
@@ -89,7 +91,18 @@
             android:id="@+id/article_paragraph_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reader Kid expressed frustration, saying, 'I find it hard to understand some people’s argument that Vietnamese must work more to escape poverty. They fail to grasp that income is directly proportional to labor productivity, and productivity is greatly influenced by physical and mental health. The only way to improve these factors is to give workers more rest time. The number of holidays in Vietnam is currently among the lowest in the region and the world, far behind countries like Japan, Korea, and Germany, resulting in one of the highest numbers of working days. I strongly support the idea of more holidays. Ideally, there should be a vacation of about a week every three months, which would stimulate demand and give workers time to recuperate, ultimately boosting labor productivity.'"
+            android:text="Soil and trees tumbled down the National Highway 4D, paralyzing traffic in Lao Cai on Monday morning. The Lao Cai People's Committee had issued an emergency situation regarding natural disaster to respond to floods and erosion in the area. High rain levels are anticipated throughout Lao Cai, with rain levels within 12 hours going up to 300 mm. By 10 a.m., 14 people were killed and 12 people were injured in Lao Cai due to landslides, and 50 houses were damaged, according to the Lao Cai People's Committee."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <!-- Nội dung bài viết (Đoạn 6) -->
+        <TextView
+            android:id="@+id/article_paragraph_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="People in That Khe Twon said the water had risen since Sunday afternoon and receded slowly. The water rose nearly to the second floor, with certain areas as high as a person's belly. There were power outages, and rescue forces had been working all night to evacuate the people."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
@@ -103,7 +116,7 @@
             android:layout_gravity="end"
             android:paddingTop="8dp"
             android:paddingBottom="20dp"
-            android:text="Vu Pham"
+            android:text="Nguyen Thanh Nam"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
             android:textSize="16sp"
