@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:color="@color/white"
-            android:text="Thế giới"
+            android:text="World"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="#d32f2f"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:color="@color/white"
 
-            android:text="Thứ tư, 4/9/2024, 21:08 (GMT+7)"
+            android:text="Wednesday, 4/9/2024, 21:08 (GMT+7)"
             android:textSize="12sp"
             android:textColor="@color/white"
             android:paddingBottom="8dp" />
@@ -42,7 +42,7 @@
             android:id="@+id/news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Việt Nam liệu sẽ huỷ diệt Thái Lan với tỉ số bao nhiêu ?"
+            android:text="Will Vietnam crush Thailand, and if so, what will the score be?"
             android:textSize="20sp"
             android:textStyle="bold"
 
@@ -62,7 +62,7 @@
             android:id="@+id/paragraph1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trận đấu giữa đội tuyển Việt Nam và Thái Lan tại chung kết AFF Cup vào tối nay đang thu hút sự quan tâm của hàng triệu người hâm mộ. Đây là cuộc đối đầu được mong đợi nhất trong năm, hứa hẹn sẽ mang đến những giây phút kịch tính trên sân cỏ."
+            android:text="The match between the Vietnamese and Thai national teams in the AFF Cup final tonight is attracting the attention of millions of fans. This is the most anticipated showdown of the year, promising to bring thrilling moments on the pitch."
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:paddingBottom="12dp" /> <!-- Tạo khoảng cách sau đoạn văn này -->
@@ -71,7 +71,7 @@
             android:id="@+id/paragraph2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trong suốt quá trình chuẩn bị, HLV Park Hang-seo đã tích cực tổ chức các buổi tập luyện với chiến thuật tấn công mạnh mẽ và phòng ngự chặt chẽ. Các cầu thủ như Quang Hải và Công Phượng được kỳ vọng sẽ tạo ra những đột phá cho đội tuyển."
+            android:text="Throughout the preparation process, Coach Park Hang-seo has been actively organizing training sessions with a focus on strong attacking strategies and tight defense. Players like Quang Hai and Cong Phuong are expected to create breakthroughs for the team."
             android:textSize="16sp"
             android:textColor="@color/white"
             android:paddingBottom="12dp" />
@@ -80,7 +80,7 @@
             android:id="@+id/paragraph3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Người hâm mộ trên khắp cả nước đang đặt niềm tin vào đội tuyển Việt Nam và mong chờ chiến thắng trước đối thủ đầy duyên nợ Thái Lan.."
+            android:text="Fans across the country are placing their trust in the Vietnamese team and eagerly anticipating a victory against their long-standing rivals, Thailand..."
             android:textSize="16sp"
             android:textColor="@color/white"
             android:paddingBottom="12dp" />
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="Nhóm Phóng Viên"
+            android:text="Reporter Group"
             android:textSize="14sp"
             android:textStyle="italic"
             android:textColor="@color/white"
@@ -114,7 +114,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Gửi ý kiến"
+                android:text="Submit Feedback"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
