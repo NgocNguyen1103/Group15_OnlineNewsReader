@@ -22,7 +22,7 @@
             android:id="@+id/notifications"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginLeft="255dp"
+            android:layout_marginLeft="315dp"
             android:layout_marginBottom="5dp"
             android:layout_gravity="bottom"
             android:src="@drawable/notification" />
