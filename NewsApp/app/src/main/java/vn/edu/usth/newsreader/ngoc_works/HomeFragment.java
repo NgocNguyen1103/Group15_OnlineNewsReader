@@ -41,17 +41,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        // Initialize ViewPager and TabLayout
-//        viewPager = view.findViewById(R.id.view_pager);
-//        tabLayout = view.findViewById(R.id.tab_layout);
-//
-//        // Set up the adapter and bind it with ViewPager
-//        HomePagerAdapter pagerAdapter = new HomePagerAdapter(getChildFragmentManager());
-//        viewPager.setAdapter(pagerAdapter);
-//
-//        // Bind ViewPager with TabLayout
-//        tabLayout.setupWithViewPager(viewPager);
-//
+
         PagerAdapter adapter = new HomePagerAdapter(getChildFragmentManager());
         ViewPager pager = view.findViewById(R.id.view_pager);
 

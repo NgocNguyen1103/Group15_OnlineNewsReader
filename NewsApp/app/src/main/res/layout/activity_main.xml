@@ -8,46 +8,7 @@
     tools:context=".ngoc_works.MainActivity">
 
 
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_marginTop="20dp">-->
-<!--    <FrameLayout-->
-<!--        android:id="@+id/layerThongBao"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:background="@android:color/white"-->
-<!--        android:visibility="gone" />-->
 
-<!--    &lt;!&ndash; Icon left (Nút Phông chữ) &ndash;&gt;-->
-<!--    <ImageView-->
-<!--        android:id="@+id/icon_popup"-->
-<!--        android:layout_width="35dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:onClick="openPopup"-->
-<!--        app:srcCompat="@drawable/baseline_font_download_24" />-->
-
-<!--    &lt;!&ndash; Icon right (Nút Thông báo) &ndash;&gt;-->
-<!--    <ImageView-->
-<!--        android:id="@+id/notifications"-->
-<!--        android:layout_width="35dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:onClick="openNoti"-->
-<!--        app:srcCompat="@drawable/notifications" />-->
-
-<!--    <FrameLayout-->
-<!--        android:id="@+id/fragment_container"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
-<!--    </RelativeLayout>-->
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -55,8 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
 
