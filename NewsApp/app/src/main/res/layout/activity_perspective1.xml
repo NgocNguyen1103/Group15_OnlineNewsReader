@@ -33,7 +33,7 @@
             android:id="@+id/article_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="When social media becomes third person in relationships."
+            android:text="When social media becomes third person in relationships"
             android:textSize="30dp"
             android:fontFamily="sans-serif-black"
             android:textStyle="bold"

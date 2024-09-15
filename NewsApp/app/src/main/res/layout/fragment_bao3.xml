@@ -32,7 +32,7 @@
             android:text="In the early years of my career in education, it was rare to find students scoring 6.0 or 6.5 out of 9 on the International English Language Testing System (IELTS),...."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:paddingBottom="4dp"/>
         <!-- Hình ảnh tác giả -->
         <ImageView

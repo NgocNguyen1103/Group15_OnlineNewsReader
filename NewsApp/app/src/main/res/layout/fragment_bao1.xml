@@ -11,7 +11,7 @@
         android:id="@+id/article_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vietnamese are working too many hours"
+        android:text="When social media becomes third person in relationships"
         android:textSize="30dp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-black"
@@ -25,10 +25,10 @@
             android:id="@+id/article_description"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Readers have expressed concerns that the working conditions in Vietnam are exhausting the younger generation,..."
+            android:text="I recently lost a friend because of social media. We had been close since we were toddlers, enduring hardships and supporting each other through various life challenges..."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:paddingBottom="4dp"/>
         <ImageView
             android:id="@+id/author_image"

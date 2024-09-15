@@ -31,7 +31,7 @@
             android:layout_height="85dp"
             android:paddingBottom="4dp"
             android:text="The road was packed with vehicles, and I was moving inch by inch...."
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/black"
             android:fontFamily="sans-serif-condensed-light"
             android:textSize="20dp" />
 
