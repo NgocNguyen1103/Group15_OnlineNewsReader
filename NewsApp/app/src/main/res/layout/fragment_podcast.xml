@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,91 +7,24 @@
     tools:context=".phuong_works.PodcastFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
-        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="62dp">
+        <fragment
+            android:id="@+id/podcast1"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/thumbnail1"
-                android:id="@+id/thumbnail"/>
-        </LinearLayout>
+            android:name="vn.edu.usth.newsreader.phuong_works.Fragment_podcast_1"
+            android:layout_height="wrap_content" />
 
-        <LinearLayout
+        <fragment
+            android:id="@+id/podcast2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:id="@+id/linearLayout3">
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:fontFamily="sans-serif-black"
-                android:gravity="left|center"
-                android:text="Vì sao kì vọng lời lớn từ bắt đáy bán đỉnh dễ thành lỗ nặng?"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp">
-            <TextView
-                android:id="@+id/descrision"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-condensed-light"
-                android:gravity="top|start"
-                android:text="Để thành công với chiến lược dự đoán giá cổ phiếu, nhà đầu tư cần thực hiện đúng hai hành động liên tiếp là bán toàn bộ ở giá cao và mua lại ở giá thấp. Điều này là rất khó, kể cả với những quỹ lớn, theo chuyên gia."
-                android:textSize="20dp"
-                android:paddingLeft="20dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:fontFamily="sans-serif-black"
-                android:gravity="left|center"
-                android:text="Các chương trình"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/podcast4"/>
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="25dp"
-                android:src="@drawable/podcast2"/>
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="25dp"
-                android:src="@drawable/podcast3"/>
-
-
-        </LinearLayout>
+            android:name="vn.edu.usth.newsreader.phuong_works.Fragment_podcast_2"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="190dp" />
     </LinearLayout>
 
-</FrameLayout>
+</ScrollView>
