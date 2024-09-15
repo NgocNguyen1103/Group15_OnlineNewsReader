@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import vn.edu.usth.newsreader.R;
 
 public class LolDetailActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

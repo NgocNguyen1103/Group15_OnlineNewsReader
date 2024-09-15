@@ -14,7 +14,6 @@ public class BallDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ball_detail);
 
         LinearLayout btnSendFeedback = findViewById(R.id.btn_send_feedback);
