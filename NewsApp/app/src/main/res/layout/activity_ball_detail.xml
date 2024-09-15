@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Danh mục tin tức -->
         <TextView
             android:id="@+id/news_category"
             android:layout_width="wrap_content"
@@ -23,7 +22,6 @@
             android:textColor="#d32f2f"
             android:paddingBottom="4dp" />
 
-        <!-- Thời gian đăng bài -->
         <TextView
             android:id="@+id/news_time"
             android:layout_width="wrap_content"
@@ -35,7 +33,6 @@
             android:textColor="@color/white"
             android:paddingBottom="8dp" />
 
-        <!-- Tiêu đề bài viết -->
         <TextView
             android:textColor="@color/white"
 
@@ -48,7 +45,6 @@
 
             android:paddingBottom="8dp" />
 
-        <!-- Hình ảnh (nếu có) -->
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="match_parent"
@@ -65,7 +61,7 @@
             android:text="The match between the Vietnamese and Thai national teams in the AFF Cup final tonight is attracting the attention of millions of fans. This is the most anticipated showdown of the year, promising to bring thrilling moments on the pitch."
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:paddingBottom="12dp" /> <!-- Tạo khoảng cách sau đoạn văn này -->
+            android:paddingBottom="12dp" />
 
         <TextView
             android:id="@+id/paragraph2"
@@ -84,7 +80,6 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:paddingBottom="12dp" />
-        <!-- Tên tác giả -->
         <TextView
             android:id="@+id/news_author"
             android:layout_width="wrap_content"
@@ -98,7 +93,7 @@
             android:paddingBottom="20dp"/>
 
         <LinearLayout
-
+            android:layout_marginTop="100dp"
             android:id="@+id/btn_send_feedback"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -109,7 +104,6 @@
             android:orientation="horizontal"
             android:padding="12dp">
 
-            <!-- Phần Text "Gửi ý kiến" -->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,7 +112,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
-            <!-- Icon mũi tên -->
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="24dp"

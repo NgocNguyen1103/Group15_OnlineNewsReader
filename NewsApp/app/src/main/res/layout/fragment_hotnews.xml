@@ -10,25 +10,22 @@
         android:padding="16dp"
         android:layout_marginBottom="250dp">
 
-        <!-- Fragment 1 - Bài báo về bóng đá -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_football"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp" />
 
-        <!-- Fragment 2 - Bài báo về cờ vua -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_chess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp" />
 
-        <!-- Fragment 3 - Bài báo về liên minh -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_lol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="250dp"/>
+            android:layout_marginBottom="100dp"/>
     </LinearLayout>
 </ScrollView>
