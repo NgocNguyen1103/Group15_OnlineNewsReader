@@ -5,7 +5,6 @@
     android:background="@android:color/white"
     android:padding="16dp">
 
-    <!-- Hình ảnh bài viết -->
     <ImageView
         android:id="@+id/t1_image"
         android:layout_width="match_parent"
@@ -13,41 +12,39 @@
         android:scaleType="centerCrop"
         android:src="@drawable/t1_drx" />
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:id="@+id/t1_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đội tuyển SKT T1 tiến vào chung kết giải đấu thế giới"
+        android:text="SKT T1 Team Advances to World Championship Finals"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:paddingTop="8dp" />
 
-    <!-- Mô tả ngắn bài viết -->
+
     <TextView
         android:id="@+id/t1_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đội tuyển SKT T1 đã có màn trình diễn ấn tượng, đánh bại đối thủ và tiến vào chung kết giải đấu thế giới Liên Minh Huyền Thoại. Đây hứa hẹn sẽ là trận đấu kịch tính và đáng xem nhất trong năm."
+        android:text="SKT T1 had an impressive performance, defeated their opponents and advanced to the finals of the League of Legends World Championship. This promises to be the most dramatic and worth-watching match of the year."
         android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
         android:paddingTop="4dp"
         android:paddingBottom="8dp" />
 
-    <!-- Phần thông tin thời gian và danh mục -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Thời gian đăng bài -->
         <TextView
             android:paddingTop="2dp"
             android:id="@+id/t1_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3 giờ trước"
+            android:text="3 hours ago"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray" />
 
@@ -57,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text=" | Bóng đá"
+            android:text=" | Lol"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray"
             android:paddingLeft="4dp" />
@@ -71,6 +68,5 @@
             android:layout_marginLeft="16dp" />
     </LinearLayout>
 
-    <!-- Icon lưu trữ bài viết -->
 
 </LinearLayout>
