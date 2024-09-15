@@ -1,0 +1,77 @@
+<LinearLayout
+    android:id="@+id/id_bao3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <!-- Tiêu đề bài viết -->
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How a country masters a foreign language"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Mô tả bài viết -->
+        <TextView
+            android:id="@+id/article_description"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="In the early years of my career in education, it was rare to find students scoring 6.0 or 6.5 out of 9 on the International English Language Testing System (IELTS),...."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="4dp"/>
+        <!-- Hình ảnh tác giả -->
+        <ImageView
+            android:id="@+id/author_image"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/bui_khanh_nguyen" />
+    </LinearLayout>
+
+    <!-- Danh mục -->
+    <TextView
+        android:id="@+id/article_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perspectives"
+        android:textSize="15sp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingBottom="4dp"/>
+
+    <!-- Hàng chứa tên tác giả và hình ảnh -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Tên tác giả -->
+        <TextView
+            android:id="@+id/article_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bui Khanh Nguyen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
