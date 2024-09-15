@@ -60,7 +60,7 @@
         <ImageView
             android:id="@+id/save_article_icon"
             android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_height="16dp"
             android:layout_gravity="end"
             android:contentDescription="Save article"
             android:src="@drawable/book_mark"

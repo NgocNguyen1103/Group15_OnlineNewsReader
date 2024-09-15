@@ -12,13 +12,11 @@ import vn.edu.usth.newsreader.R;
 
 
 public class HotNewsFragment extends Fragment {
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hotnews, container, false);
+
         FootBallFragment footballNewsFragment = new FootBallFragment();
         ChessFragment chessNewsFragment = new ChessFragment();
         LolFragment lolNewsFragment = new LolFragment();
