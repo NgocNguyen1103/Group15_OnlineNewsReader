@@ -19,18 +19,14 @@ public class FootBallFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_foot_ball, container, false);
 
-        // Lắng nghe sự kiện khi người dùng nhấp vào fragment
         view.setOnClickListener(v -> {
-            // Tạo Intent để chuyển sang BallDetailActivity
             Intent intent = new Intent(getActivity(), BallDetailActivity.class);
 
             startActivity(intent);
         });
 
         return view;
-        //return inflater.inflate(R.layout.fragment_foot_ball, container, false);
     }
 }

@@ -5,7 +5,6 @@
     android:background="@android:color/white"
     android:padding="16dp">
 
-    <!-- Hình ảnh bài viết -->
     <ImageView
         android:id="@+id/chess_image"
         android:layout_width="match_parent"
@@ -13,45 +12,40 @@
         android:scaleType="centerCrop"
         android:src="@drawable/magnus" />
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:id="@+id/chess_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đại kiện tướng Magnus Carlsen chuẩn bị cho giải đấu thế giới"
+        android:text="Grandmaster Magnus Carlsen prepares for the World Championship."
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:paddingTop="8dp" />
 
-    <!-- Mô tả ngắn bài viết -->
     <TextView
         android:id="@+id/chess_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Magnus Carlsen, nhà vô địch thế giới nhiều lần, đang chuẩn bị cho giải đấu cờ vua thế giới sắp tới. Đây là giải đấu được kỳ vọng sẽ là cuộc đối đầu kịch tính giữa các kiện tướng hàng đầu."
+        android:text="Magnus Carlsen, the multiple-time World Champion, is preparing for the upcoming World Chess Championship. This tournament is expected to be an intense showdown between the world's top grandmasters."
         android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
         android:paddingTop="4dp"
         android:paddingBottom="8dp" />
 
-    <!-- Phần thông tin thời gian và danh mục -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Thời gian đăng bài -->
         <TextView
             android:id="@+id/chess_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 giờ trước"
+            android:text="2 hours ago"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray" />
 
-        <!-- Danh mục tin tức -->
-        <!-- Danh mục tin tức -->
+
         <TextView
             android:paddingTop="2dp"
 
@@ -59,7 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=" | Cờ vua"
+            android:text=" | Chess"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray"
             android:paddingLeft="4dp" />
@@ -73,7 +67,6 @@
             android:layout_marginLeft="16dp" />
     </LinearLayout>
 
-    <!-- Icon lưu trữ bài viết -->
 
 
 </LinearLayout>

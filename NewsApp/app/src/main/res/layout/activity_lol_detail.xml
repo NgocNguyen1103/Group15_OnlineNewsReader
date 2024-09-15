@@ -11,44 +11,41 @@
       android:orientation="vertical"
       android:padding="16dp">
 
-    <!-- Danh mục tin tức -->
     <TextView
         android:id="@+id/news_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:color="@color/white"
-        android:text="Thế giới"
+        android:text="World"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="#d32f2f"
         android:paddingBottom="4dp" />
 
-    <!-- Thời gian đăng bài -->
     <TextView
         android:id="@+id/news_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:color="@color/white"
 
-        android:text="Thứ tư, 4/9/2024, 21:08 (GMT+7)"
+        android:text=" Wednesday, 4/9/2024, 21:08 (GMT+7)"
         android:textSize="12sp"
         android:textColor="@color/white"
         android:paddingBottom="8dp" />
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:textColor="@color/white"
 
         android:id="@+id/news_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đội tuyển SKT T1 tiến vào chung kết giải đấu thế giới "
+        android:text="The SKT T1 team advances to the finals of the World Championship.
+ "
         android:textSize="20sp"
         android:textStyle="bold"
 
         android:paddingBottom="8dp" />
 
-    <!-- Hình ảnh (nếu có) -->
     <ImageView
         android:id="@+id/news_image"
         android:layout_width="match_parent"
@@ -62,16 +59,16 @@
         android:id="@+id/paragraph1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Với những chiến thắng thuyết phục trước các đối thủ hàng đầu, SKT T1 chính thức tiến vào trận chung kết của giải đấu CKTG (Chung Kết Thế Giới) 2024. Đây hứa hẹn sẽ là cuộc chạm trán gay cấn và đầy kịch tính"
+        android:text="With convincing victories over top opponents, SKT T1 has officially advanced to the finals of the 2024 World Championship (CKTG). This promises to be an intense and thrilling showdown."
         android:textSize="16sp"
         android:textColor="@android:color/white"
-        android:paddingBottom="12dp" /> <!-- Tạo khoảng cách sau đoạn văn này -->
+        android:paddingBottom="12dp" />
 
     <TextView
         android:id="@+id/paragraph2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Với những chiến thắng thuyết phục trước các đối thủ hàng đầu, SKT T1 chính thức tiến vào trận chung kết của giải đấu CKTG (Chung Kết Thế Giới) 2024. Đây hứa hẹn sẽ là cuộc chạm trán gay cấn và đầy kịch tính "
+        android:text="With commanding victories over top contenders, SKT T1 has officially advanced to the finals of the 2024 World Championship (CKTG). This is set to be an intense and thrilling clash. "
         android:textSize="16sp"
         android:textColor="@color/white"
         android:paddingBottom="12dp" />
@@ -80,17 +77,24 @@
         android:id="@+id/paragraph3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trong trận bán kết vừa qua, Faker đã có màn trình diễn ngoạn mục với những vị tướng quen thuộc như LeBlanc và Ryze, giúp SKT T1 giành chiến thắng trước đối thủ khó nhằn JDG từ Trung Quốc."
+        android:text="
+In the recent semifinals, Faker delivered a spectacular performance with his signature champions like LeBlanc and Ryze, leading SKT T1 to victory over the formidable Chinese team JDG.
+
+
+
+
+
+
+"
         android:textSize="16sp"
         android:textColor="@color/white"
         android:paddingBottom="12dp" />
-    <!-- Tên tác giả -->
     <TextView
         android:id="@+id/news_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="Nhóm Phóng Viên"
+        android:text="Reporter Group"
         android:textSize="14sp"
         android:textStyle="italic"
         android:textColor="@color/white"
@@ -98,6 +102,7 @@
         android:paddingBottom="20dp"/>
 
     <LinearLayout
+        android:layout_marginTop="130dp"
         android:id="@+id/btn_send_feedback"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -107,16 +112,14 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-      <!-- Phần Text "Gửi ý kiến" -->
       <TextView
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:text="Gửi ý kiến"
+          android:text="Submit feedback"
           android:textColor="#FFFFFF"
           android:textSize="16sp" />
 
-      <!-- Icon mũi tên -->
       <ImageView
           android:layout_width="16dp"
           android:layout_height="24dp"

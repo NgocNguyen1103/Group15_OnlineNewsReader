@@ -51,6 +51,8 @@
         <activity
             android:name=".ngoc_works.vid1_detailActivity"
             android:exported="false" />
+        <activity android:name=".duy_works.FeedbackActivity"
+            android:exported="false"/>
         <activity
             android:name=".ngoc_works.MainActivity"
             android:exported="true">

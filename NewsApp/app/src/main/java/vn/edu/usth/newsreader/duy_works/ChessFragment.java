@@ -29,6 +29,5 @@ public class ChessFragment extends Fragment {
         });
 
         return view;
-        //return inflater.inflate(R.layout.fragment_chess, container, false);
     }
 }

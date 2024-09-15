@@ -5,7 +5,6 @@
     android:background="@android:color/white"
     android:padding="16dp">
 
-    <!-- Hình ảnh bài viết -->
     <ImageView
         android:id="@+id/ball_image"
         android:layout_width="match_parent"
@@ -13,46 +12,41 @@
         android:scaleType="centerCrop"
         android:src="@drawable/vn_tl" />
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:id="@+id/ball_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đội tuyển Việt Nam chuẩn bị cho trận đấu với Thái Lan"
+        android:text="The Vietnamese team prepares for the match against Thailand."
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:paddingTop="8dp" />
 
-    <!-- Mô tả ngắn bài viết -->
     <TextView
         android:id="@+id/ball_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đội tuyển Việt Nam sẽ đối đầu với Thái Lan trong trận chung kết AFF Cup vào tối nay. Đây là cuộc chạm trán được mong đợi nhất trong năm."
+        android:text="The Vietnamese team will face Thailand in the AFF Cup final tonight. This is the most anticipated clash of the year."
         android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
         android:paddingTop="4dp"
         android:paddingBottom="8dp" />
 
-    <!-- Phần thông tin thời gian và danh mục -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Thời gian đăng bài -->
         <TextView
             android:paddingTop="2dp"
 
             android:id="@+id/ball_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 giờ trước"
+            android:text="1 hour ago"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray" />
 
-        <!-- Danh mục tin tức -->
         <TextView
             android:paddingTop="2dp"
 
@@ -60,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=" | Bóng đá"
+            android:text=" | Football"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray"
             android:paddingLeft="4dp" />
@@ -75,7 +69,6 @@
             android:src="@drawable/book_mark" />
     </LinearLayout>
 
-    <!-- Icon lưu trữ bài viết -->
 
 
 </LinearLayout>
