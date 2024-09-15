@@ -25,17 +25,17 @@ public class OpinionFragment extends Fragment {
 
         // Thêm fragment Vietnamese working FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao1, bao1Fragment)
+                .replace(R.id.id_opinion1, bao1Fragment)
                 .commit();
 
         // Thêm fragment emal student vào FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao2, bao2Fragment)
+                .replace(R.id.id_opinion2, bao2Fragment)
                 .commit();
 
         // Thêm fragment bao yagi vào FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao3, bao3Fragment)
+                .replace(R.id.id_opinion3, bao3Fragment)
                 .commit();
         return view;
         //return inflater.inflate(R.layout.fragment_second, container, false);

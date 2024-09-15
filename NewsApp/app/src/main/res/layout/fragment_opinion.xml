@@ -5,26 +5,26 @@
     android:orientation="vertical"
     >
 
-    <!-- fragment 1 Vietnamese working -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
 >
     <FrameLayout
-        android:id="@+id/id_bao1"
+        android:id="@+id/id_opinion1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <!-- fragment 2 Email student  -->
+
     <FrameLayout
-        android:id="@+id/id_bao2"
+        android:id="@+id/id_opinion2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <!-- fragment 3 Bao Yagi-->
+
     <FrameLayout
-        android:id="@+id/id_bao3"
+        android:id="@+id/id_opinion3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="250dp"/>

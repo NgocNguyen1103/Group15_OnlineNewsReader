@@ -11,17 +11,17 @@
         android:orientation="vertical">
 
         <FrameLayout
-            android:id="@+id/id_bao1"
+            android:id="@+id/id_perspective1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <FrameLayout
-            android:id="@+id/id_bao2"
+            android:id="@+id/id_perspective2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <FrameLayout
-            android:id="@+id/id_bao3"
+            android:id="@+id/id_perspective3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

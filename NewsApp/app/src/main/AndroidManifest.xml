@@ -56,6 +56,15 @@
             android:name=".duc_works.Opinion1_detailActivity"
             android:exported="false" />
         <activity
+            android:name=".duc_works.Perspective1_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.Perspective2_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.Perspective3_detailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ngoc_works.vid2_detailActivity"
             android:exported="false" />
         <activity

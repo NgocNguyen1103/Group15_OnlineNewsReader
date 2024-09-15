@@ -23,23 +23,23 @@ public class PerspectiveFragment extends Fragment {
 //        return inflater.inflate(R.layout.fragment_perspective, container, false);
 
         // Tạo 3 fragment cho các bài báo
-        FragmentBao1 bao1Fragment = new FragmentBao1();
-        FragmentBao2 bao2Fragment = new FragmentBao2();
-        FragmentBao3 bao3Fragment = new FragmentBao3();
+        Perspective1Fragment bao1Fragment = new Perspective1Fragment();
+        Perspective2Fragment bao2Fragment = new Perspective2Fragment();
+        Perspective3Fragment bao3Fragment = new Perspective3Fragment();
 
         // Thêm fragment social media vào FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao1, bao1Fragment)
+                .replace(R.id.id_perspective1, bao1Fragment)
                 .commit();
 
         // Thêm fragment traffic vào FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao2, bao2Fragment)
+                .replace(R.id.id_perspective2, bao2Fragment)
                 .commit();
 
         // Thêm fragment foreign language vào FragmentContainerView
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_bao3, bao3Fragment)
+                .replace(R.id.id_perspective3, bao3Fragment)
                 .commit();
         return view;
     }

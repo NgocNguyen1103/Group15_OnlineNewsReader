@@ -7,11 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.newsreader.R;
 
-
-public class ActivityBao2 extends AppCompatActivity {
+public class Perspective3_detailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bao2);
+        setContentView(R.layout.activity_perspective3_detail);
     }
 }
