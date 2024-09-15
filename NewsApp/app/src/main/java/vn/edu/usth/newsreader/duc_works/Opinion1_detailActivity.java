@@ -15,5 +15,7 @@ public class Opinion1_detailActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_opinion1_detail);
 
+
+
     }
 }
