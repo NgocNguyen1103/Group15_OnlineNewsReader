@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment {
         icon_Popup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Hiển thị pop-up khi nhấn vào icon
+
                 showPopup();
             }
         });
