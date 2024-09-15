@@ -70,6 +70,16 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
 
+        <ImageView
+            android:id="@+id/save_article_icon"
+            android:layout_width="24dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="16dp"
+            android:contentDescription="Save article"
+            android:src="@drawable/book_mark" />
+
+
     </LinearLayout>
 
 
