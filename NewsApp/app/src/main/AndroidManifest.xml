@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31">
         <activity
+            android:name=".nghia_works.Activity_setting_noti"
+            android:exported="false" />
+        <activity
             android:name=".phuong_works.Notification_activity"
             android:exported="false" />
         <activity
@@ -51,8 +54,9 @@
         <activity
             android:name=".ngoc_works.vid1_detailActivity"
             android:exported="false" />
-        <activity android:name=".duy_works.FeedbackActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".duy_works.FeedbackActivity"
+            android:exported="false" />
         <activity
             android:name=".ngoc_works.MainActivity"
             android:exported="true">
