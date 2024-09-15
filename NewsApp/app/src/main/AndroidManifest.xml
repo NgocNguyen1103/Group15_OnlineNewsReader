@@ -13,6 +13,12 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31">
         <activity
+            android:name=".phuong_works.Activity_podcast_2"
+            android:exported="false" />
+        <activity
+            android:name=".phuong_works.Activity_podcast_1"
+            android:exported="false" />
+        <activity
             android:name=".nghia_works.Activity_setting_noti"
             android:exported="false" />
         <activity
