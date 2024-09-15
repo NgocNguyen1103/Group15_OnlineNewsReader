@@ -23,15 +23,6 @@ public class FragmentBao3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bao3, container, false);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ActivityBao3.class);
-                startActivity(intent);
-            }
-        });
-
-
         return view;
     }
 }
