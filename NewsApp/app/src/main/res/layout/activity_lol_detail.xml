@@ -62,7 +62,7 @@
         android:text="With convincing victories over top opponents, SKT T1 has officially advanced to the finals of the 2024 World Championship (CKTG). This promises to be an intense and thrilling showdown."
         android:textSize="16sp"
         android:textColor="@android:color/white"
-        android:paddingBottom="12dp" /> <!-- Tạo khoảng cách sau đoạn văn này -->
+        android:paddingBottom="12dp" />
 
     <TextView
         android:id="@+id/paragraph2"
@@ -89,7 +89,6 @@ In the recent semifinals, Faker delivered a spectacular performance with his sig
         android:textSize="16sp"
         android:textColor="@color/white"
         android:paddingBottom="12dp" />
-    <!-- Tên tác giả -->
     <TextView
         android:id="@+id/news_author"
         android:layout_width="wrap_content"
@@ -112,7 +111,6 @@ In the recent semifinals, Faker delivered a spectacular performance with his sig
         android:orientation="horizontal"
         android:padding="12dp">
 
-      <!-- Phần Text "Gửi ý kiến" -->
       <TextView
           android:layout_width="0dp"
           android:layout_height="wrap_content"
@@ -121,7 +119,6 @@ In the recent semifinals, Faker delivered a spectacular performance with his sig
           android:textColor="#FFFFFF"
           android:textSize="16sp" />
 
-      <!-- Icon mũi tên -->
       <ImageView
           android:layout_width="16dp"
           android:layout_height="24dp"
