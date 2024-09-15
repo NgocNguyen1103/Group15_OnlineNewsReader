@@ -13,7 +13,7 @@ public class Activity_setting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_setting_noti);
+        setContentView(R.layout.activity_setting_nghia);
 
     }
 }
