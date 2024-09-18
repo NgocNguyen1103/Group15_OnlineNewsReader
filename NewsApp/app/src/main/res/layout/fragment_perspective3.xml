@@ -6,10 +6,8 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:background="@android:color/white"
-    android:layout_marginBottom="50dp"
-    >
+    android:layout_marginBottom="50dp">
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:id="@+id/article_title"
         android:layout_width="match_parent"
@@ -24,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <!-- Mô tả bài viết -->
         <TextView
             android:id="@+id/article_description"
             android:layout_width="300dp"
@@ -34,7 +31,6 @@
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@android:color/black"
             android:paddingBottom="4dp"/>
-        <!-- Hình ảnh tác giả -->
         <ImageView
             android:id="@+id/author_image"
             android:layout_width="136dp"
@@ -43,7 +39,6 @@
             android:src="@drawable/bui_khanh_nguyen" />
     </LinearLayout>
 
-    <!-- Danh mục -->
     <TextView
         android:id="@+id/article_category"
         android:layout_width="match_parent"
@@ -53,7 +48,6 @@
         android:textColor="@android:color/darker_gray"
         android:paddingBottom="4dp"/>
 
-    <!-- Hàng chứa tên tác giả và hình ảnh -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
