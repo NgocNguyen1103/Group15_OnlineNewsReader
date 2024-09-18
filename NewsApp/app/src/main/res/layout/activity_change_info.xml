@@ -98,7 +98,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="95dp"
-            android:background="@drawable/avt"
+            android:background="@drawable/nghiaava"
             tools:ignore="MissingConstraints">
 
         </ImageView>
