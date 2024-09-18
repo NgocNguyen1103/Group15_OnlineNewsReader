@@ -12,10 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="62dp"
-
         >
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/img_1" />
+
         <androidx.fragment.app.FragmentContainerView
+
             android:id="@+id/video1_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
