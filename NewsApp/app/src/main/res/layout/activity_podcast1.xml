@@ -107,6 +107,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:src="@drawable/icon_play"
+                android:id="@+id/play_button"
                 android:layout_marginLeft="23dp"/>
 
             <ImageView
