@@ -20,20 +20,20 @@ public class PerspectiveFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_perspective, container, false);
 
-        Perspective1Fragment bao1Fragment = new Perspective1Fragment();
-        Perspective2Fragment bao2Fragment = new Perspective2Fragment();
-        Perspective3Fragment bao3Fragment = new Perspective3Fragment();
+        Perspective1Fragment news1Fragment = new Perspective1Fragment();
+        Perspective2Fragment news2Fragment = new Perspective2Fragment();
+        Perspective3Fragment news3Fragment = new Perspective3Fragment();
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_perspective1, bao1Fragment)
+                .replace(R.id.id_perspective1, news1Fragment)
                 .commit();
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_perspective2, bao2Fragment)
+                .replace(R.id.id_perspective2, news2Fragment)
                 .commit();
 
         getChildFragmentManager().beginTransaction()
-                .replace(R.id.id_perspective3, bao3Fragment)
+                .replace(R.id.id_perspective3, news3Fragment)
                 .commit();
         return view;
     }
