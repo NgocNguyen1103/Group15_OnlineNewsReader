@@ -7,7 +7,6 @@
     android:padding="8dp"
     android:background="@android:color/white">
 
-    <!-- Tiêu đề bài viết -->
     <TextView
         android:id="@+id/article_title"
         android:layout_width="match_parent"
@@ -22,9 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <!-- Mô tả bài viết -->
 
-        <!-- Hình ảnh của bài báo -->
         <TextView
             android:id="@+id/article_description"
             android:layout_width="281dp"
@@ -43,7 +40,6 @@
             android:src="@drawable/email_student" />
     </LinearLayout>
 
-    <!-- Danh mục -->
     <TextView
         android:id="@+id/article_category"
         android:layout_width="match_parent"
@@ -53,15 +49,12 @@
         android:textColor="@android:color/darker_gray"
         android:paddingBottom="4dp"/>
 
-
-    <!-- Hàng chứa tên tác giả và hình ảnh -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <!-- Tên tác giả -->
         <TextView
             android:id="@+id/article_author"
             android:layout_width="0dp"
@@ -71,6 +64,15 @@
             android:textSize="16sp"
             android:textStyle="italic"
             android:textColor="@android:color/black"/>
+        <ImageView
+            android:id="@+id/save_article_icon"
+            android:layout_width="24dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="16dp"
+            android:contentDescription="Save article"
+            android:src="@drawable/book_mark" />
+
     </LinearLayout>
 
 

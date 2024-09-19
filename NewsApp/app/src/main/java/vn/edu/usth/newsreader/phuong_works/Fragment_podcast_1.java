@@ -21,8 +21,6 @@ public class Fragment_podcast_1 extends Fragment {
     }
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,6 +34,7 @@ public class Fragment_podcast_1 extends Fragment {
                 startActivity(intent);
             }
         });
+
         return view;
     }
 }

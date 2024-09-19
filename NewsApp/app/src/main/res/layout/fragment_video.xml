@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+
     tools:context=".ngoc_works.VideoFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,15 +12,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="62dp"
         >
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/img_1" />
+
         <androidx.fragment.app.FragmentContainerView
+
             android:id="@+id/video1_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/video2_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/video3_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="190dp" />

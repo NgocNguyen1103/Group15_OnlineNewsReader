@@ -26,8 +26,10 @@ public class VideoFragment extends Fragment {
         // Load Video1Fragment
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.video1_fragment, new Video1Fragment()); // Use container for fragment 1
-        transaction.replace(R.id.video2_fragment, new Video2Fragment()); // Use container for fragment 2
+        transaction.replace(R.id.video1_fragment, new Video1Fragment());
+        transaction.replace(R.id.video2_fragment, new Video2Fragment());
+        transaction.replace(R.id.video3_fragment, new Video3Fragment());
+
         transaction.commit();
 
         return view;

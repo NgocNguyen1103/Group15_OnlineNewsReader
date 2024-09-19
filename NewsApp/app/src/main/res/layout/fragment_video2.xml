@@ -56,15 +56,27 @@
             android:id="@+id/intro"
             android:textSize="19dp"
             android:text="The 520 m long Thames River barrier, blocking the river, consists of 10 large steel gates that can be raised and lowered depending on the situation of rising water"            />
-        <TextView
-            android:fontFamily="sans-serif-condensed-light"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:id="@+id/upload_time"
-            android:textColor="#AAA9A9"
-            android:text="September 9, 2024 | 09:15 am GMT+7 | Technology"/>
-" />
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload_time"
+                android:textColor="#AAA9A9"
+                android:text="September 9, 2024 | 09:15 am GMT+7 | Technology"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="90dp"
+                android:src="@drawable/book_mark" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222222"
+    android:background="#FFFFFF"
     android:id="@+id/hotnews1">
 
     <LinearLayout
@@ -15,34 +15,29 @@
             android:id="@+id/news_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:color="@color/white"
             android:text="World"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#d32f2f"
+            android:textColor="#000000"
             android:paddingBottom="4dp" />
 
         <TextView
             android:id="@+id/news_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:color="@color/white"
-
             android:text="Wednesday, 4/9/2024, 21:08 (GMT+7)"
             android:textSize="12sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="8dp" />
 
         <TextView
-            android:textColor="@color/white"
-
             android:id="@+id/news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Will Vietnam crush Thailand, and if so, what will the score be?"
             android:textSize="20sp"
             android:textStyle="bold"
-
+            android:textColor="#000000"
             android:paddingBottom="8dp" />
 
         <ImageView
@@ -53,14 +48,13 @@
             android:src="@drawable/vn_tl_2"
             android:paddingBottom="30dp" />
 
-
         <TextView
             android:id="@+id/paragraph1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="The match between the Vietnamese and Thai national teams in the AFF Cup final tonight is attracting the attention of millions of fans. This is the most anticipated showdown of the year, promising to bring thrilling moments on the pitch."
             android:textSize="16sp"
-            android:textColor="@android:color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
 
         <TextView
@@ -69,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="Throughout the preparation process, Coach Park Hang-seo has been actively organizing training sessions with a focus on strong attacking strategies and tight defense. Players like Quang Hai and Cong Phuong are expected to create breakthroughs for the team."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
 
         <TextView
@@ -78,8 +72,9 @@
             android:layout_height="wrap_content"
             android:text="Fans across the country are placing their trust in the Vietnamese team and eagerly anticipating a victory against their long-standing rivals, Thailand..."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
+
         <TextView
             android:id="@+id/news_author"
             android:layout_width="wrap_content"
@@ -88,7 +83,7 @@
             android:text="Reporter Group"
             android:textSize="14sp"
             android:textStyle="italic"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingTop="8dp"
             android:paddingBottom="20dp"/>
 
@@ -109,18 +104,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Submit Feedback"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow_right"
-                app:tint="#FFFFFF" />
+                app:tint="#000000" />
         </LinearLayout>
 
-
     </LinearLayout>
-
 
 </ScrollView>

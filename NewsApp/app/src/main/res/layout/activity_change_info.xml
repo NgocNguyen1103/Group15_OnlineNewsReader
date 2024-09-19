@@ -14,21 +14,41 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
+        <LinearLayout
 
-        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_marginTop="25dp"
-            android:text="Change information"
-            android:textSize="35dp"
-            android:textStyle="bold"></TextView>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/change">
 
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:text="Change information"
+                android:textSize="35dp">
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            android:background="#d3d3d3" >
+        </View>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="90dp"
             android:text="User name"
             android:textSize="19dp"
             tools:ignore="MissingConstraints">
@@ -48,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:text="User password"
+            android:text="User date of birth"
             android:textSize="19dp"
             tools:ignore="MissingConstraints">
 
@@ -78,7 +98,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="95dp"
-            android:background="@drawable/avt"
+            android:background="@drawable/nghiaava"
             tools:ignore="MissingConstraints">
 
         </ImageView>

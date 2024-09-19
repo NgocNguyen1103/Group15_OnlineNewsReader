@@ -8,12 +8,24 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="62dp">
+        >
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/img_1" />
+
+
         <fragment
+            android:layout_marginTop="10dp"
             android:id="@+id/podcast1"
             android:layout_width="match_parent"
             android:name="vn.edu.usth.newsreader.phuong_works.Fragment_podcast_1"

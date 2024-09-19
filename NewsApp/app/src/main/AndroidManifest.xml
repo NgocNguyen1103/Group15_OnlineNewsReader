@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31">
         <activity
+            android:name=".ngoc_works.vid3_detailActivity"
+            android:exported="false" />
+        <activity
             android:name=".phuong_works.Activity_podcast_2"
             android:exported="false" />
         <activity
@@ -53,6 +56,15 @@
             android:exported="false" />
         <activity
             android:name=".duc_works.Opinion1_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.Perspective1_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.Perspective2_detailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".duc_works.Perspective3_detailActivity"
             android:exported="false" />
         <activity
             android:name=".ngoc_works.vid2_detailActivity"

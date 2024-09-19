@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/article_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perspectives"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/article_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday, September 2, 2024, 07:00 (GMT+7)"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How a country masters a foreign language."
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In the early years of my career in education, it was rare to find students scoring 6.0 or 6.5 out of 9 on the International English Language Testing System (IELTS), equivalent to a B2 level on the Common European Framework of Reference for Languages (CEFR). Today, even secondary and primary school students in Vietnam are achieving scores of 8.0 or 8.5, representing the highest C2 CEFR level, an impressive leap in English proficiency."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This significant improvement reflects the growing emphasis on English proficiency among the younger generations, driven by changing societal attitudes, enhanced teaching methods and increased exposure to English through social media. The Vietnamese government's initiative to establish English as the official second language in the education system further aims to bolster the country's global integration and development. Language policies, including those related to foreign languages, are pivotal for a nation's social, economic and cultural trajectory. Different countries have adopted varied approaches, providing valuable lessons for Vietnam."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In English-native countries like the U.S., U.K., Australia, Canada, New Zealand and Ireland, English education primarily supports immigrants and those whose first language is not English. Canada, a unique case with both English and French as national languages, teaches each language as a second language in respective regions. Countries such as Singapore, Malaysia, the Philippines and India boast high English proficiency. Vietnam, once part of the Francophone group, similarly had a generation fluent in French. European nations like Sweden and the Netherlands also have high English proficiency, with bilingualism and trilingualism being common. Approaches to language policies vary widely, with some countries adopting English as an official language, others as a second language, or simply as a key part of the education system."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Singapore stands out for its success in adopting English as the lingua franca, uniting its multicultural society and positioning the city-state as an international hub. English education in Singapore follows the British model, culminating in O-level and A-level exams, and plays a key role in attracting global businesses to the region. Malaysia's language policy has sparked debate, oscillating between English and Malay as the medium of instruction. The Dual Language Program (DLP) currently balances English and Malay in secondary education, addressing concerns about national pride versus global competitiveness. In the Philippines, English is the primary language of instruction from secondary to tertiary levels. The country's immersive and intensive language programs have drawn students from neighboring nations, including Vietnam, for short-term English courses. The Philippines' clear American English accent and high English proficiency make it a popular destination for language learners."
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/article_paragraph_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="While high English proficiency does not always correlate with national wealth, evident from the contrasting GDPs of the Philippines and countries like Japan, South Korea and China, it undeniably opens doors to global opportunities. The impact of proficient English use is most visible in enhanced access to international markets and cultural exchanges. As a high school English teacher since 1998, involved in developing English education programs across all levels, I have witnessed the evolution of language teaching in Vietnam. My research in Content and Language Integrated Learning (CLIL) demonstrates that teaching educational content in both English and Vietnamese fosters higher proficiency than traditional foreign language instruction."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vietnam's first bilingual education program, launched in 1994 with French and later transitioning to English, laid the groundwork for the rise of international and bilingual schools. Programs like the Cambridge curriculum employ the CLIL approach, where English serves as a tool for learning subjects such as science, arts and humanities. Vietnam's education system is increasingly outcome-focused, aiming for high school graduates to achieve at least a B1 CEFR level, equipping them to use English as a lifelong skill. However, Vietnam must continue exploring various language models, learning from other countries while adapting them to local contexts."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vietnam's education system is increasingly outcome-focused, aiming for high school graduates to achieve at least a B1 CEFR level, equipping them to use English as a lifelong skill. However, Vietnam must continue exploring various language models, learning from other countries while adapting them to local contexts."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/article_paragraph_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vietnam is on the right path, enhancing foreign language proficiency while preserving its national language. By implementing effective language education methods, Vietnam can ensure that its students have greater opportunities on the global stage without sacrificing their cultural heritage."
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/news_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingTop="8dp"
+            android:paddingBottom="20dp"
+            android:text="Bui Khanh Nguyen - Education expert"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="italic"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
