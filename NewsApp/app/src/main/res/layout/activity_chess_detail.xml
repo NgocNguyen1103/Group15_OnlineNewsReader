@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222222"
+    android:background="#FFFFFF"
     android:id="@+id/hotnews2">
 
     <LinearLayout
@@ -15,34 +15,29 @@
             android:id="@+id/news_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:color="@color/white"
             android:text="World"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#d32f2f"
+            android:textColor="#000000"
             android:paddingBottom="4dp" />
 
         <TextView
             android:id="@+id/news_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:color="@color/white"
-
             android:text="Wednesday, 4/9/2024, 21:08 (GMT+7)"
             android:textSize="12sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="8dp" />
 
         <TextView
-            android:textColor="@color/white"
-
             android:id="@+id/news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grandmaster Magnus Carlsen prepares for the World Championship tournament. "
+            android:text="Grandmaster Magnus Carlsen prepares for the World Championship tournament."
             android:textSize="20sp"
             android:textStyle="bold"
-
+            android:textColor="#000000"
             android:paddingBottom="8dp" />
 
         <ImageView
@@ -53,25 +48,22 @@
             android:src="@drawable/magnus_detail"
             android:paddingBottom="30dp" />
 
-
         <TextView
             android:id="@+id/paragraph1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Magnus has spent a lot of time practicing new strategies. He focuses not only on defensive options but also seeks sharp attacking opportunities to create breakthroughs in crucial matches. Magnus is always highly regarded by experts in every tournament he participates in.
-
-"
+            android:text="Magnus has spent a lot of time practicing new strategies. He focuses not only on defensive options but also seeks sharp attacking opportunities to create breakthroughs in crucial matches. Magnus is always highly regarded by experts in every tournament he participates in."
             android:textSize="16sp"
-            android:textColor="@android:color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
 
         <TextView
             android:id="@+id/paragraph2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="In this tournament, Magnus will face strong opponents from various countries, particularly those players known for their aggressive attacking style. "
+            android:text="In this tournament, Magnus will face strong opponents from various countries, particularly those players known for their aggressive attacking style."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
 
         <TextView
@@ -80,8 +72,9 @@
             android:layout_height="wrap_content"
             android:text="In a recent interview, Magnus shared: I always strive to improve myself, not just in how I view chess but also in how I approach every match."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingBottom="12dp" />
+
         <TextView
             android:id="@+id/news_author"
             android:layout_width="wrap_content"
@@ -90,7 +83,7 @@
             android:text="Reporter Group"
             android:textSize="14sp"
             android:textStyle="italic"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:paddingTop="8dp"
             android:paddingBottom="20dp"/>
 
@@ -111,19 +104,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Submit feedback"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="24dp"
                 android:src="@drawable/arrow_right"
-                app:tint="#FFFFFF" />
+                app:tint="#000000" />
         </LinearLayout>
 
-
-
     </LinearLayout>
-
 
 </ScrollView>
