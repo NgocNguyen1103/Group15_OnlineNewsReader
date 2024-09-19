@@ -21,7 +21,6 @@ public class PerspectiveFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_perspective, container, false);
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_perspective, container, false);
-
         // Tạo 3 fragment cho các bài báo
         FragmentBao1 bao1Fragment = new FragmentBao1();
         FragmentBao2 bao2Fragment = new FragmentBao2();
