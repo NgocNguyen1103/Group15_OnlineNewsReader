@@ -27,7 +27,5 @@ public class Opinion3Fragment extends Fragment {
             }
         });
         return view;
-
-        //return inflater.inflate(R.layout.fragment_opinion3, container, false);
     }
 }

@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit Feedback"
+        android:text="Send your comment"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="12dp"/>
