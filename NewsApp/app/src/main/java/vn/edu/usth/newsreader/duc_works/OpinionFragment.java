@@ -34,6 +34,5 @@ public class OpinionFragment extends Fragment {
                 .replace(R.id.id_opinion3, news3Fragment)
                 .commit();
         return view;
-        //return inflater.inflate(R.layout.fragment_second, container, false);
     }
 }

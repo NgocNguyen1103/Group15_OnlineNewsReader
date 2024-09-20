@@ -28,7 +28,5 @@ public class Opinion1Fragment extends Fragment {
             }
         });
         return view;
-
-        //return inflater.inflate(R.layout.fragment_opinion1, container, false);
     }
 }
