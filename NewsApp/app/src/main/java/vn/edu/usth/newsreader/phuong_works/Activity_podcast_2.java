@@ -27,7 +27,18 @@ public class Activity_podcast_2 extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playPodcast();
+                if(mediaPlayer == null) {
+                    playPodcast();
+                    button.setImageResource(R.drawable.pause_button);
+                }else {
+                    if(mediaPlayer.isPlaying()){
+                        mediaPlayer.pause();
+                        button.setImageResource(R.drawable.icon_play);
+                    }else {
+                        mediaPlayer.start();
+                        button.setImageResource(R.drawable.pause_button);
+                    }
+                }
             }
         });
     }
