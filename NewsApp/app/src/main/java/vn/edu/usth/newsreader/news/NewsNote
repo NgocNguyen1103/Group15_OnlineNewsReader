@@ -1,4 +1,5 @@
 Thứ tự đọc:
+dùng news api, có thể lên web mà xem json nó trả về có dạng như nào
 
 1. NewsApiService
 Đóng vai trò giao tiếp với API. Xem lớp này để hiểu các endpoint được sử dụng, cách lấy dữ liệu từ API và các phương thức cần gọi.

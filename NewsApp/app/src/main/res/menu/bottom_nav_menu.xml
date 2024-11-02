@@ -6,7 +6,7 @@
     <item
         android:id="@+id/navigation_quotes"
         android:title="Quotes"
-        android:icon="@drawable/quotes_icon" />
+        android:icon="@drawable/quote_icon" />
 
     <item
         android:id="@+id/navigation_game"
