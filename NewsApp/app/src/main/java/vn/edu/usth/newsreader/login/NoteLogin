@@ -1,0 +1,9 @@
+LoginActivity.java:
+Xử lý đăng nhập người dùng qua Firebase Authentication.
+Cho phép đăng nhập bằng email/mật khẩu hoặc ẩn danh.
+Chuyển đến MainActivity nếu đăng nhập thành công, và hiển thị lỗi chi tiết khi đăng nhập thất bại.
+Cung cấp liên kết đến màn hình đăng ký.
+
+RegisterActivity.java: Xử lý đăng ký tài khoản mới với Firebase Authentication.
+Người dùng nhập email và mật khẩu để tạo tài khoản.
+Chuyển đến MainActivity khi đăng ký thành công, và hiển thị lỗi chi tiết nếu có vấn đề (email tồn tại, mật khẩu yếu, v.v.).

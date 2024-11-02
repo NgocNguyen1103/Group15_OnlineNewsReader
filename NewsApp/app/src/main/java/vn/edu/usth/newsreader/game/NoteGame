@@ -1,0 +1,9 @@
+GameActivity là Activity mở trò chơi trong một WebView dựa trên URL được truyền từ GameFragment.
+WebView: Hiển thị trò chơi với cài đặt JavaScriptEnabled để hỗ trợ các trò chơi yêu cầu JavaScript.
+URL của trò chơi: Nhận URL của trò chơi từ Intent và tải vào WebView để mở trò chơi trực tiếp trong ứng dụng.
+
+
+GameFragment là một Fragment cung cấp giao diện cho người dùng để chọn và mở các trò chơi trực tuyến.
+Giao diện: Hiển thị các nút bấm cho 4 trò chơi khác nhau.
+Mở trò chơi: Khi nhấn vào nút, gọi phương thức openGame(String url) để chuyển đến GameActivity, mở đường dẫn của trò chơi được chọn trong GameActivity.
+Phương thức openGame(String url): Tạo một Intent chứa URL của trò chơi và khởi chạy GameActivity với URL đó.
