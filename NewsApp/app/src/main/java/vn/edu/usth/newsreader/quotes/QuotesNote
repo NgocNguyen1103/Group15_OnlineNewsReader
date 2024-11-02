@@ -1,0 +1,21 @@
+Thứ tự đọc:
+
+1. QuotesApiService
+Bắt đầu với lớp này để hiểu cách thức giao tiếp với API liên quan đến việc lấy dữ liệu "Quotes" (câu trích dẫn).
+Lớp này định nghĩa các endpoint và phương thức gọi API.
+
+2. QuotesApiClient
+Tiếp theo, kiểm tra lớp QuotesApiClient để hiểu cách thiết lập Retrofit hoặc HTTP client khác.
+Lớp này sẽ cấu hình URL cơ sở (baseUrl) và thiết lập kết nối đến QuotesApiService.
+
+3. Quote
+Đây là lớp dữ liệu đại diện cho một câu trích dẫn (quote).
+Đọc lớp này để hiểu cấu trúc của một câu trích dẫn, các thuộc tính của nó, và cách nó được ánh xạ từ dữ liệu API.
+
+4. QuotesFragment
+Cách hiển thị danh sách câu trích dẫn trên giao diện người dùng.
+Lớp này có thể chứa logic về cách gọi API và cập nhật giao diện.
+
+5. QuotesAdapter
+Cách dữ liệu từ Quote được đổ vào RecyclerView hoặc danh sách trong QuotesFragment.
+Adapter này chịu trách nhiệm ánh xạ dữ liệu vào các item của RecyclerView.

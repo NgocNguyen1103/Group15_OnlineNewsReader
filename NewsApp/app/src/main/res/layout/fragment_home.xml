@@ -1,53 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ngoc_works.HomeFragment">
+    android:layout_height="match_parent">
 
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/black"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <ImageView
-            android:id="@+id/icon_popup"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="bottom"
-            android:src="@drawable/font_size" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
 
 
-        <ImageView
-            android:layout_width="170dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/img_1" />
-
-        <ImageView
-            android:id="@+id/notifications"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginBottom="5dp"
-            android:layout_gravity="bottom"
-            android:src="@drawable/notification" />
-    </LinearLayout>
-    <!-- TODO: Update blank fragment layout -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_marginTop="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-
-</LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

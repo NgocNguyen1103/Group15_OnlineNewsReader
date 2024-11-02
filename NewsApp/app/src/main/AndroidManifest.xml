@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,70 +23,11 @@
         android:theme="@style/Theme.NewsReader"
         tools:targetApi="31">
         <activity
-            android:name=".ngoc_works.vid3_detailActivity"
+            android:name=".game.GameActivity"
             android:exported="false" />
         <activity
-            android:name=".phuong_works.Activity_podcast_2"
-            android:exported="false" />
-        <activity
-            android:name=".phuong_works.Activity_podcast_1"
-            android:exported="false" />
-        <activity
-            android:name=".nghia_works.Activity_setting_noti"
-            android:exported="false" />
-        <activity
-            android:name=".phuong_works.Notification_activity"
-            android:exported="false" />
-        <activity
-            android:name=".duy_works.LolDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duy_works.BallDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duy_works.ChessDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".nghia_works.Activity_ext"
-            android:exported="false" />
-        <activity
-            android:name=".nghia_works.Activity_late"
-            android:exported="false" />
-        <activity
-            android:name=".nghia_works.Activity_setting"
-            android:exported="false" />
-        <activity
-            android:name=".nghia_works.Activity_info"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Opinion3_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Opinion2_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Opinion1_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Perspective1_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Perspective2_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duc_works.Perspective3_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ngoc_works.vid2_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ngoc_works.vid1_detailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".duy_works.FeedbackActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ngoc_works.MainActivity"
+            android:name=".MainActivity"
+            android:enableOnBackInvokedCallback="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,6 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".news.DetailActivity" />
     </application>
 
 </manifest>
