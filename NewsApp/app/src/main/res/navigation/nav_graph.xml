@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="vn.edu.usth.newsreader.news.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="vn.edu.usth.newsreader.game.GameFragment"
+        android:label="Game"/>
+    <fragment
+        android:id="@+id/navigation_quotes"
+        android:name="vn.edu.usth.newsreader.quotes.QuotesFragment"
+        android:label="Quotes"
+       />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="vn.edu.usth.newsreader.history.HistoryFragment"
+        android:label="Lịch sử" />
+
+</navigation>

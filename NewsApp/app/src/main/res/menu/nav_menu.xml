@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_tin_moi_nhat"
+        android:title="Tin mới nhất"
+        android:icon="@drawable/baseline_article_24" />
+
+    <item
+        android:id="@+id/nav_lich_su"
+        android:title="Lịch sử"
+        android:icon="@drawable/baseline_history_24" />
+
+
+    <item
+        android:id="@+id/nav_gui_y_kien"
+        android:title="Gửi ý kiến"
+        android:icon="@drawable/baseline_share_24" />
+
+
+    <item
+        android:id="@+id/nav_thoat"
+        android:title="Thoát"
+        android:icon="@drawable/baseline_exit_to_app_24" />
+
+</menu>

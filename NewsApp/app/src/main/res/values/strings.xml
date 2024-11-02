@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">News Reader</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">NewsApp</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">my_default_channel</string>
+
 </resources>

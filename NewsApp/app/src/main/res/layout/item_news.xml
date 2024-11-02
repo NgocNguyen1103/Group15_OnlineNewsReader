@@ -1,0 +1,60 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="#E8F5E9"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@color/colorGray"
+        >
+
+        <!-- Tiêu đề tin tức -->
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingBottom="4dp"/>
+
+        <!-- Mô tả tin tức -->
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:paddingBottom="4dp" />
+
+        <!-- Nguồn tin tức -->
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="8dp" />
+
+        <!-- Hình ảnh tin tức -->
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

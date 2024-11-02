@@ -1,0 +1,5 @@
+<!-- res/drawable/news_item_background.xml -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+    <item android:drawable="@android:color/white" />
+</ripple>
