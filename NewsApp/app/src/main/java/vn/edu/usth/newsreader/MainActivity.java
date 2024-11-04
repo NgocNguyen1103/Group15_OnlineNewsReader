@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             int itemId = menuItem.getItemId();
 
             if (itemId == R.id.nav_tin_moi_nhat) {
-                navController.popBackStack(R.id.navigation_home, false); // Điều hướng đến HomeFragment nếu đang ở fragment khác
+                navController.popBackStack(R.id.navigation_new, false); // Điều hướng đến HomeFragment nếu đang ở fragment khác
             } else if (itemId == R.id.nav_gui_y_kien) {
                 dialPhoneNumber("5554");
             } else if (itemId == R.id.nav_thoat) {
@@ -143,17 +143,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void saveArticleToHistory(Article article) {
-        Set<String> historySet = getSharedPreferences("AppHistory", MODE_PRIVATE)
-                .getStringSet("history", new HashSet<>());
-        if (historySet == null) {
-            historySet = new HashSet<>();
-        }
-        historySet.add(article.getTitle() + "|" + article.getUrl());
 
-        getSharedPreferences("AppHistory", MODE_PRIVATE)
-                .edit()
-                .putStringSet("history", historySet)
-                .apply();
-    }
 }

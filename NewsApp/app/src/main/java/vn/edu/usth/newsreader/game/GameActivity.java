@@ -16,15 +16,21 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        WebView webView = findViewById(R.id.gameWebView);
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true); // Kích hoạt JavaScript nếu trò chơi yêu cầu
+        // Khởi tạo đối tượng WebView và cài đặt các thiết lập cần thiết
+        WebView webView = findViewById(R.id.gameWebView); // Liên kết với WebView trong layout
 
+// Khởi tạo đối tượng WebSettings để cấu hình các cài đặt của WebView
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true); // Cho phép JavaScript, nếu trò chơi cần JavaScript để chạy
+
+// Cài đặt WebViewClient cho WebView để mở URL bên trong ứng dụng thay vì mở trong trình duyệt mặc định
         webView.setWebViewClient(new WebViewClient());
 
+// Lấy URL trò chơi từ Intent, URL này được truyền từ Activity trước
         String gameUrl = getIntent().getStringExtra("gameUrl");
-        if (gameUrl != null) {
-            webView.loadUrl(gameUrl);
+        if (gameUrl != null) { // Kiểm tra nếu URL không null
+            webView.loadUrl(gameUrl); // Tải URL của trò chơi vào WebView
         }
+
     }
 }
