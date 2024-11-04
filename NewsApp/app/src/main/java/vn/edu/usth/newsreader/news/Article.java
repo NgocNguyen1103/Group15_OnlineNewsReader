@@ -1,5 +1,14 @@
 package vn.edu.usth.newsreader.news;
 
+/* Lớp Article ở đây đóng vai trò là một data model đại diện cho một bài báo (article) trong ứng dụng của bạn.
+ Đây là nơi lưu trữ các thông tin chính của một bài báo mà bạn có thể nhận từ API hoặc cơ sở dữ liệu.
+ 1. Các thuộc tính của lớp
+Source source: Nguồn gốc của bài báo.
+String title: Tiêu đề của bài báo
+String description: Mô tả bài báo
+String url: Đường dẫn URL đến bài báo đầy đủ.
+String urlToImage: Đường dẫn URL đến hình ảnh minh họa của bài báo, thường được dùng để hiển thị thumbnail trong ứng dụng (có thể null nếu không có ảnh).
+ */
 public class Article {
 
     private Source source;

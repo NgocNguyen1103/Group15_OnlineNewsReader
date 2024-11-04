@@ -16,15 +16,16 @@ public class DetailActivity extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webView);
 
-        String url = getIntent().getStringExtra("url");
+        String url = getIntent().getStringExtra("url"); // Nhận URL từ Intent
 
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient()); // Sử dụng WebViewClient để mở URL trong WebView thay vì mở trong trình duyệt
 
-        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptEnabled(true); // Bật hỗ trợ JavaScript cho WebView
 
         if (url != null) {
-            webView.loadUrl(url);
+            webView.loadUrl(url); // Nếu URL hợp lệ, tải URL vào WebView
         }
     }
 }
+
 
