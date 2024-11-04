@@ -20,9 +20,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     private final Context context; // Ngữ cảnh để làm việc với các thành phần của giao diện và gọi Intent
     private List<Article> articles; // Danh sách các bài báo sẽ được hiển thị trong RecyclerView
-    private final HistoryManager historyManager; // Quản lý lịch sử, dùng để lưu lại các bài báo đã xem
+    private final HistoryManager historyManager; /** Quản lý lịch sử, dùng để lưu lại các bài báo đã xem*/
 
-    // Constructor
+        // Constructor
     public NewsAdapter(Context context, List<Article> articles) {
         this.context = context;
         this.articles = articles;
