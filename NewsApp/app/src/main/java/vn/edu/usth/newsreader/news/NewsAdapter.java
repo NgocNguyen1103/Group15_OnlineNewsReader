@@ -63,13 +63,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         holder.description.setText(article.getDescription());
         holder.source.setText(article.getSource().getName());
 
-        // Kiểm tra và tải hình ảnh từ URL của bài báo sử dụng thư viện Glide
-        if (article.getUrlToImage() != null) {
-            Glide.with(context).load(article.getUrlToImage()).into(holder.imageView);
+        String imageUrl = article.getUrlToImage();
+        if (imageUrl != null) {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .placeholder(R.drawable.placeholder_image) // Hiển thị trong khi tải
+                    .error(R.drawable.error_image) // Hiển thị nếu có lỗi
+                    .into(holder.imageView);
         } else {
-            // Nếu không có URL hình ảnh, đặt hình ảnh mặc định hoặc để trống
-            holder.imageView.setImageResource(0);
+            holder.imageView.setImageResource(R.drawable.default_image); // Đặt ảnh mặc định nếu URL là null
         }
+
 
         // Xử lý khi người dùng nhấn vào item bài báo
         holder.itemView.setOnClickListener(v -> {

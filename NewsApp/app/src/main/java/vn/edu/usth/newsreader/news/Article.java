@@ -1,5 +1,7 @@
 package vn.edu.usth.newsreader.news;
 
+import com.google.gson.annotations.SerializedName;
+
 /* Lớp Article ở đây đóng vai trò là một data model đại diện cho một bài báo (article) trong ứng dụng của bạn.
  Đây là nơi lưu trữ các thông tin chính của một bài báo mà bạn có thể nhận từ API hoặc cơ sở dữ liệu.
  1. Các thuộc tính của lớp
@@ -14,7 +16,9 @@ public class Article {
     private Source source;
     private String title;
     private String description; // có thể là null
+
     private String url;
+    @SerializedName("urlToImage")
     private String urlToImage; // có thể là null
 
     public Article(Source source, String title, String description, String url, String urlToImage) {

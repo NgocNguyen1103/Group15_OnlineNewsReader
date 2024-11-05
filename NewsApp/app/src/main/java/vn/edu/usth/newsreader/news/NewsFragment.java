@@ -2,6 +2,8 @@ package vn.edu.usth.newsreader.news;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,9 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
@@ -40,6 +45,10 @@ public class NewsFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        // Khởi tạo adapter một lần duy nhất
+        newsAdapter = new NewsAdapter(requireContext(), articles);
+        recyclerView.setAdapter(newsAdapter);
+
         swipeRefreshLayout.setOnRefreshListener(this::fetchNews);
 
         fetchNews(); // Gọi hàm fetchNews() để tải dữ liệu ngay khi Fragment được tạo
@@ -49,19 +58,25 @@ public class NewsFragment extends Fragment {
         swipeRefreshLayout.setRefreshing(true); // Hiển thị biểu tượng làm mới
 
         NewsApiService apiService = NewsApiClient.getInstance().create(NewsApiService.class);
-        Call<NewsResponse> call = apiService.getTopHeadlines("d2b1e0d9b6794535ab91504cd3b6dcb4", "us");
+        Call<NewsResponse> call = apiService.getTopHeadlines("techcrunch","d2b1e0d9b6794535ab91504cd3b6dcb4" );
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
             public void onResponse(@NonNull Call<NewsResponse> call, @NonNull Response<NewsResponse> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    articles = response.body().getArticles();
-                    newsAdapter = new NewsAdapter(requireContext(), articles);
-                    recyclerView.setAdapter(newsAdapter);
+                if (response.isSuccessful() && response.body() != null && response.body().getArticles() != null) {
+                    Log.d("NewsResponse", "API Response: " +  new Gson().toJson(response.body()));
+
+                    articles.clear(); // Xóa dữ liệu cũ
+                    articles.addAll(response.body().getArticles()); // Thêm dữ liệu mới
+                    // In log URL của ảnh để kiểm tra
+                    for (Article article : articles) {
+                        Log.d("NewsResponse", "Image URL: " + article.getUrlToImage());
+                    }
+                    newsAdapter.notifyDataSetChanged(); // Cập nhật UI
                 } else {
                     Toast.makeText(requireContext(), "Failed to load news", Toast.LENGTH_SHORT).show();
                 }
-                swipeRefreshLayout.setRefreshing(false);
+                swipeRefreshLayout.setRefreshing(false); // Tắt biểu tượng làm mới
             }
 
             @Override
@@ -69,8 +84,9 @@ public class NewsFragment extends Fragment {
                 if (isAdded()) {
                     Toast.makeText(requireContext(), "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-                swipeRefreshLayout.setRefreshing(false);
+                swipeRefreshLayout.setRefreshing(false); // Tắt biểu tượng làm mới
             }
         });
+
     }
 }
