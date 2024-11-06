@@ -8,8 +8,7 @@ public interface NewsApiService {
 
     @GET("top-headlines")
     Call<NewsResponse> getTopHeadlines(
-            @Query("apiKey") String apiKey,
-            @Query("country") String country
+            @Query("sources") String sources,
+            @Query("apiKey") String apiKey
     );
 }
-

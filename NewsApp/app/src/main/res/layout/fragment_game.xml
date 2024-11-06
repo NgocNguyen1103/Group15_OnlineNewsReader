@@ -35,7 +35,7 @@
                     android:id="@+id/gameName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Turbo Race 3D"
+                    android:text=" bra"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -114,7 +114,7 @@
                     android:id="@+id/gameName3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Game 3"
+                    android:text="Stickman"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                     android:id="@+id/gameName4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Game 2"
+                    android:text="Feed lion"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 

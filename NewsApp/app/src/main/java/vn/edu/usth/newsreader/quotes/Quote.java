@@ -1,6 +1,6 @@
 package vn.edu.usth.newsreader.quotes;
 
-
+// Lớp Quote đại diện cho một câu trích dẫn, bao gồm nội dung và tác giả
 public class Quote {
     private String quote;
     private String author;

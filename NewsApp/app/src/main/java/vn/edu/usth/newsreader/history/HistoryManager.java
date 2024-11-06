@@ -55,8 +55,4 @@ public class HistoryManager {
         editor.apply();
     }
 
-    // Xóa lịch sử
-    public void clearHistory() {
-        sharedPreferences.edit().remove("history").apply();
-    }
 }

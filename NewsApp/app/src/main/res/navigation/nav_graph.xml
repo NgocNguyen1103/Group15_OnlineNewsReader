@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/navigation_new">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="vn.edu.usth.newsreader.news.HomeFragment"
+        android:id="@+id/navigation_new"
+        android:name="vn.edu.usth.newsreader.news.NewsFragment"
         android:label="Home" />
 
     <fragment

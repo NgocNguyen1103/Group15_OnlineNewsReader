@@ -1,16 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_new"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home" />
+        android:title="News" />
     <item
         android:id="@+id/navigation_quotes"
         android:title="Quotes"
-        android:icon="@drawable/quotes_icon" />
+        android:icon="@drawable/quote_icon" />
 
     <item
         android:id="@+id/navigation_game"
         android:icon="@drawable/baseline_videogame_asset_24"
-        android:title="Game" />
+        android:title="Games" />
 
 </menu>

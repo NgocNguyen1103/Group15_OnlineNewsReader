@@ -39,8 +39,9 @@ public class GameFragment extends Fragment {
     }
 
     private void openGame(String url) {
-        Intent intent = new Intent(getActivity(), GameActivity.class);
-        intent.putExtra("gameUrl", url);
-        startActivity(intent);
+        Intent intent = new Intent(getActivity(), GameActivity.class); // Tạo một Intent để mở GameActivity
+        intent.putExtra("gameUrl", url); // Truyền URL của trò chơi qua Intent
+        startActivity(intent); // Bắt đầu GameActivity
     }
+
 }

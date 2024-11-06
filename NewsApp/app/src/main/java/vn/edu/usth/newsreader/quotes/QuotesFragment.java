@@ -43,19 +43,19 @@ public class QuotesFragment extends Fragment {
         quotesAdapter = new QuotesAdapter(new ArrayList<>());
         quotesRecyclerView.setAdapter(quotesAdapter);
 
-        // Gọi API cho từng danh mục
         fetchQuotesFromCategories();
 
         return view;
     }
 
     private void fetchQuotesFromCategories() {
+        String apiKey = "5Kweh91YJ9kBnv+jreCHfA==Mk6Vy5Zlfy0rkgpv";
+
         for (String category : categories) {
-            QuotesApiClient.Factory.getInstance().getQuotes(category).enqueue(new Callback<List<Quote>>() {
+            QuotesApiClient.getService().getQuotes(apiKey, category).enqueue(new Callback<List<Quote>>() {
                 @Override
                 public void onResponse(@NonNull Call<List<Quote>> call, @NonNull Response<List<Quote>> response) {
                     if (response.isSuccessful() && response.body() != null) {
-                        // Thêm tất cả các quote từ category này vào danh sách chung
                         allQuotes.addAll(response.body());
                         quotesAdapter.setQuotes(allQuotes);
                     }
