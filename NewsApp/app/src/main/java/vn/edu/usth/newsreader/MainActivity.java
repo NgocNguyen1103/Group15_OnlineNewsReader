@@ -15,33 +15,46 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
-import vn.edu.usth.newsreader.R;
-import androidx.core.app.ActivityCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.concurrent.Executors;
 
+import vn.edu.usth.newsreader.login.AppDatabase;
 import vn.edu.usth.newsreader.login.LoginActivity;
-import vn.edu.usth.newsreader.news.Article;
+import vn.edu.usth.newsreader.login.User;
+import vn.edu.usth.newsreader.login.UserDao;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavController navController;
     private static final int REQUEST_CALL_PERMISSION = 1;
+    @Override
+    protected void onStart() {
+        super.onStart();
+        UserDao userDao = AppDatabase.getInstance(this).userDao();
+        User currentUser = userDao.getLoggedInUser();
+
+        if (currentUser == null || !currentUser.isLoggedIn()) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Đóng MainActivity nếu người dùng chưa đăng nhập
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Kiểm tra người dùng đã đăng nhập
+        checkIfUserLoggedIn();
+
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
-
         navController = navHostFragment.getNavController();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -79,9 +92,53 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawers();
             return true;
         });
-
     }
 
+    /**
+     * Kiểm tra xem người dùng đã đăng nhập chưa.
+     * Nếu chưa đăng nhập, chuyển hướng tới màn hình LoginActivity.
+     */
+    private void checkIfUserLoggedIn() {
+        AppDatabase db = AppDatabase.getInstance(this);
+        Executors.newSingleThreadExecutor().execute(() -> {
+            User currentUser = db.userDao().getLoggedInUser();
+            if (currentUser == null) {
+                runOnUiThread(() -> {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                });
+            }
+        });
+    }
+
+
+    /**
+     * Đăng xuất người dùng hiện tại.
+     * Xóa trạng thái đăng nhập trong Room Database và chuyển hướng về LoginActivity.
+     */
+    private void signOutUser() {
+        AppDatabase db = AppDatabase.getInstance(this);
+        Executors.newSingleThreadExecutor().execute(() -> {
+            User currentUser = db.userDao().getLoggedInUser();
+            if (currentUser != null) {
+                currentUser.setLoggedIn(false); // Cập nhật trạng thái đăng xuất
+                db.userDao().updateUser(currentUser); // Cập nhật vào cơ sở dữ liệu
+            }
+            runOnUiThread(() -> {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            });
+        });
+    }
+
+
+    /**
+     * Gọi một số điện thoại.
+     *
+     * @param phoneNumber Số điện thoại cần gọi.
+     */
     private void dialPhoneNumber(String phoneNumber) {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:" + phoneNumber));
@@ -91,15 +148,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.CALL_PHONE}, REQUEST_CALL_PERMISSION);
         }
-    }
-
-    private void signOutUser() {
-        FirebaseAuth.getInstance().signOut();
-
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        finish();
     }
 
     @Override
@@ -121,18 +169,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        if (auth.getCurrentUser() == null) {
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
-
-    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CALL_PERMISSION) {
@@ -143,6 +179,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }

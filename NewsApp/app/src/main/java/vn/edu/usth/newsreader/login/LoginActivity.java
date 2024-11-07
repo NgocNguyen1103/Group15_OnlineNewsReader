@@ -7,82 +7,56 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
+
+import java.util.concurrent.Executors;
 
 import vn.edu.usth.newsreader.MainActivity;
 import vn.edu.usth.newsreader.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // Khởi tạo Firebase Authentication
-    private FirebaseAuth auth;
+    private EditText emailEditText, passwordEditText;
+    private Button loginButton, anonymousLoginButton;
+    private TextView signUpTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Khởi tạo Firebase Authentication
-        auth = FirebaseAuth.getInstance();
+        emailEditText = findViewById(R.id.emailEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginButton);
+        signUpTextView = findViewById(R.id.signUpTextView);
+        anonymousLoginButton = findViewById(R.id.anonymousLoginButton);
 
-        // Tham chiếu đến các thành phần giao diện người dùng
-        EditText email = findViewById(R.id.emailEditText);
-        EditText password = findViewById(R.id.passwordEditText);
-        Button login = findViewById(R.id.loginButton);
-        TextView signUp = findViewById(R.id.signUpTextView);
-        Button anonymousLoginButton = findViewById(R.id.anonymousLoginButton);
+        loginButton.setOnClickListener(v -> {
+            String email = emailEditText.getText().toString();
+            String password = passwordEditText.getText().toString();
 
-        // Đặt sự kiện click cho nút đăng nhập để thực hiện đăng nhập với email và mật khẩu
-        login.setOnClickListener(v -> {
-            String emailText = email.getText().toString();
-            String passwordText = password.getText().toString();
+            if (!email.isEmpty() && !password.isEmpty()) {
+                UserDao userDao = AppDatabase.getInstance(getApplicationContext()).userDao();
+                User user = userDao.login(email, password);
 
-            // Kiểm tra xem các trường đã được điền hay chưa
-            if (!emailText.isEmpty() && !passwordText.isEmpty()) {
-                // Thực hiện đăng nhập với email và mật khẩu
-                auth.signInWithEmailAndPassword(emailText, passwordText)
-                        .addOnCompleteListener(this, task -> {
-                            if (task.isSuccessful()) {
-                                // Đăng nhập thành công, chuyển đến MainActivity
-                                Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                startActivity(intent);
-                                finish();
-                            } else {
-                                // Thông báo lỗi nếu đăng nhập không thành công
-                                Toast.makeText(LoginActivity.this, "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                if (user != null) {
+                    // Cập nhật trạng thái đăng nhập trong Room
+                    user.setLoggedIn(true);
+                    userDao.updateUser(user);
+
+                    Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, MainActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(this, "Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show();
+                }
             } else {
-                // Thông báo khi thông tin chưa đầy đủ
-                Toast.makeText(LoginActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // Đặt sự kiện click cho TextView đăng ký để điều hướng đến màn hình đăng ký
-        signUp.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        });
 
-        // Đặt sự kiện click cho nút đăng nhập ẩn danh để truy cập không cần tài khoản
-        anonymousLoginButton.setOnClickListener(v -> {
-            auth.signInAnonymously()
-                    .addOnCompleteListener(this, task -> {
-                        if (task.isSuccessful()) {
-                            // Đăng nhập ẩn danh thành công, chuyển đến MainActivity
-                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            // Thông báo lỗi nếu đăng nhập ẩn danh không thành công
-                            FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                            Toast.makeText(LoginActivity.this, "Đăng nhập không thành công: " + (e != null ? e.getMessage() : "Lỗi không xác định"), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        });
+
+
+        signUpTextView.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
     }
 }
-
