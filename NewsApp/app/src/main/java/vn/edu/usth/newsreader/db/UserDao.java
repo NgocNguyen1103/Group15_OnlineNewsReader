@@ -1,9 +1,11 @@
-package vn.edu.usth.newsreader.login;
+package vn.edu.usth.newsreader.db;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import vn.edu.usth.newsreader.login.User;
 
 @Dao
 public interface UserDao {
@@ -25,5 +27,8 @@ public interface UserDao {
     // Thêm người dùng mới
     @Insert
     void insertUser(User user);
+
+
+
 }
 

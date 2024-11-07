@@ -7,6 +7,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.newsreader.R;
+import vn.edu.usth.newsreader.db.AppDatabase;
+import vn.edu.usth.newsreader.db.UserDao;
 
 public class RegisterActivity extends AppCompatActivity {
 

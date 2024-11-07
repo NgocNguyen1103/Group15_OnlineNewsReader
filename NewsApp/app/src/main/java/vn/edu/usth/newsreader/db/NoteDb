@@ -1,0 +1,26 @@
+1. AppDatabase (Lớp chính của Room Database)
+- Vai trò: Là lớp cốt lõi của Room Database, chịu trách nhiệm tạo và quản lý cơ sở dữ liệu trong ứng dụng.
+- Chức năng:
++ Cung cấp truy cập tới các DAO (Data Access Objects) thông qua các phương thức như userDao() và articleDao().
++ Quản lý phiên bản và cấu hình của cơ sở dữ liệu (ví dụ: tên database, migrations, etc.).
+Liên quan đến: Đây là nơi khởi tạo và kết nối các DAO để sử dụng trong ứng dụng.
+
+2. ArticleDao (DAO dành cho các bài báo)
+- Vai trò: Chịu trách nhiệm truy vấn dữ liệu liên quan đến bài báo từ cơ sở dữ liệu.
+- Chức năng chính:
++ Truy vấn danh sách các bài báo trong lịch sử (getHistoryArticles).
++ Lưu hoặc cập nhật thông tin bài báo (insertArticle, updateArticle).
++ Lấy bài báo theo URL và userId (getArticleByUrl).
+Liên quan đến: Được sử dụng bởi các tính năng như lịch sử đọc bài báo.
+
+3. UserDao (DAO dành cho người dùng)
+- Vai trò: Quản lý việc truy cập dữ liệu liên quan đến người dùng.
+- Chức năng chính:
++ Lấy thông tin người dùng đang đăng nhập (getLoggedInUser).
++ Thực hiện kiểm tra đăng nhập (login).
++ Thêm hoặc cập nhật thông tin người dùng (insertUser, updateUser).
+Liên quan đến: Được sử dụng cho các chức năng đăng nhập, đăng ký, và kiểm tra phiên đăng nhập.
+
+4. Conclusion:
+- AppDatabase là trung tâm, giúp liên kết các DAO (ArticleDao và UserDao) với cơ sở dữ liệu.
+- ArticleDao và UserDao thực hiện các thao tác cụ thể với dữ liệu (CRUD) thông qua AppDatabase.

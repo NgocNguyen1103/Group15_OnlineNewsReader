@@ -2,6 +2,7 @@ package vn.edu.usth.newsreader.news;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import java.util.List;
+import java.util.concurrent.Executors;
 
 import vn.edu.usth.newsreader.R;
 import vn.edu.usth.newsreader.history.HistoryManager;
+import vn.edu.usth.newsreader.db.AppDatabase;
 
 // NewsAdapter là lớp Adapter để quản lý và hiển thị danh sách các bài báo (articles) trong RecyclerView
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
@@ -21,12 +24,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     private final Context context; // Ngữ cảnh để làm việc với các thành phần của giao diện và gọi Intent
     private List<Article> articles; // Danh sách các bài báo sẽ được hiển thị trong RecyclerView
     private final HistoryManager historyManager; /** Quản lý lịch sử, dùng để lưu lại các bài báo đã xem*/
-
+    public int userId;
         // Constructor
     public NewsAdapter(Context context, List<Article> articles) {
         this.context = context;
         this.articles = articles;
-        this.historyManager = new HistoryManager(context); // Khởi tạo đối tượng quản lý lịch sử
+        this.historyManager = new HistoryManager(context, userId); // Khởi tạo đối tượng quản lý lịch sử
     }
 
     // Lớp con NewsViewHolder dùng để liên kết các phần tử giao diện của mỗi item trong danh sách bài báo
@@ -56,35 +59,43 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
-        // Lấy bài báo tại vị trí hiện tại trong danh sách và cập nhật giao diện
         Article article = articles.get(position);
-        // Đặt tiêu đề bài báo, mô tả bài báo, tên nguồn của bài báo
+
+        // Thiết lập nội dung bài báo
         holder.title.setText(article.getTitle());
         holder.description.setText(article.getDescription());
-        holder.source.setText(article.getSource().getName());
 
         String imageUrl = article.getUrlToImage();
         if (imageUrl != null) {
             Glide.with(context)
                     .load(imageUrl)
-                    .placeholder(R.drawable.placeholder_image) // Hiển thị trong khi tải
-                    .error(R.drawable.error_image) // Hiển thị nếu có lỗi
+                    .placeholder(R.drawable.placeholder_image)
+                    .error(R.drawable.error_image)
                     .into(holder.imageView);
         } else {
-            holder.imageView.setImageResource(R.drawable.default_image); // Đặt ảnh mặc định nếu URL là null
+            holder.imageView.setImageResource(R.drawable.default_image);
         }
-
 
         // Xử lý khi người dùng nhấn vào item bài báo
         holder.itemView.setOnClickListener(v -> {
-            // Tạo Intent để mở màn hình chi tiết bài báo
-            Intent intent = new Intent(context, DetailActivity.class);
-            intent.putExtra("url", article.getUrl()); // Truyền URL bài báo cho DetailActivity
-            historyManager.addToHistory(article);     // Thêm bài báo vào lịch sử xem
+            // Sử dụng Executor để chạy trên background thread
+            Executors.newSingleThreadExecutor().execute(() -> {
+                AppDatabase db = AppDatabase.getInstance(context);
+                int userId = db.userDao().getLoggedInUser().getId();
 
-            context.startActivity(intent);
+                HistoryManager historyManager = new HistoryManager(context, userId);
+                historyManager.addToHistory(article, userId); // Truyền cả bài báo và userId
+
+                // Chuyển sang giao diện chi tiết trên main thread
+                new android.os.Handler(Looper.getMainLooper()).post(() -> {
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("url", article.getUrl());
+                    context.startActivity(intent);
+                });
+            });
         });
     }
+
 
     @Override
     public int getItemCount() {

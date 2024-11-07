@@ -12,6 +12,8 @@ import java.util.concurrent.Executors;
 
 import vn.edu.usth.newsreader.MainActivity;
 import vn.edu.usth.newsreader.R;
+import vn.edu.usth.newsreader.db.AppDatabase;
+import vn.edu.usth.newsreader.db.UserDao;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,24 +37,31 @@ public class LoginActivity extends AppCompatActivity {
             String password = passwordEditText.getText().toString();
 
             if (!email.isEmpty() && !password.isEmpty()) {
-                UserDao userDao = AppDatabase.getInstance(getApplicationContext()).userDao();
-                User user = userDao.login(email, password);
+                Executors.newSingleThreadExecutor().execute(() -> {
+                    UserDao userDao = AppDatabase.getInstance(this).userDao();
+                    User user = userDao.login(email, password);
 
-                if (user != null) {
-                    // Cập nhật trạng thái đăng nhập trong Room
-                    user.setLoggedIn(true);
-                    userDao.updateUser(user);
+                    if (user != null) {
+                        // Cập nhật trạng thái đăng nhập
+                        user.setLoggedIn(true);
+                        userDao.updateUser(user);
 
-                    Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(this, MainActivity.class));
-                    finish();
-                } else {
-                    Toast.makeText(this, "Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show();
-                }
+                        // Chuyển hướng về MainActivity
+                        runOnUiThread(() -> {
+                            Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(this, MainActivity.class));
+                            finish();
+                        });
+                    } else {
+                        runOnUiThread(() -> Toast.makeText(this, "Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show());
+                    }
+                });
             } else {
                 Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
 
 

@@ -1,0 +1,19 @@
+Cấu trúc của Room Database trong Android được xây dựng theo mô hình ORM (Object-Relational Mapping), cho phép bạn tương tác với cơ sở dữ liệu
+SQLite một cách dễ dàng bằng cách sử dụng các đối tượng Java/Kotlin. Dưới đây là các thành phần chính của Room Database cùng vai trò của chúng:
+
+1. Entity (Bảng trong cơ sở dữ liệu)
+Vai trò:
+Đại diện cho một bảng trong cơ sở dữ liệu.
+Mỗi lớp Entity ánh xạ tới một bảng với các cột tương ứng là các thuộc tính của lớp.
+
+2. DAO (Data Access Object)
+Vai trò:
+Định nghĩa các thao tác CRUD (Create, Read, Update, Delete) hoặc truy vấn SQL đối với bảng trong cơ sở dữ liệu.
+Giao tiếp giữa ứng dụng và cơ sở dữ liệu.
+
+3. Database Class
+Vai trò:
+Đại diện cho cơ sở dữ liệu tổng thể.
+Là entry point cho Room để truy cập các DAO.
+Kế thừa từ RoomDatabase
+

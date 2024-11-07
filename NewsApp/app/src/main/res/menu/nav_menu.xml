@@ -17,7 +17,6 @@
         android:title="Gửi ý kiến"
         android:icon="@drawable/baseline_share_24" />
 
-
     <item
         android:id="@+id/nav_thoat"
         android:title="Thoát"

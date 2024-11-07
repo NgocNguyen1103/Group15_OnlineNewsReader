@@ -1,40 +1,32 @@
 package vn.edu.usth.newsreader.news;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-/* Lớp Article ở đây đóng vai trò là một data model đại diện cho một bài báo (article) trong ứng dụng của bạn.
- Đây là nơi lưu trữ các thông tin chính của một bài báo mà bạn có thể nhận từ API hoặc cơ sở dữ liệu.
- 1. Các thuộc tính của lớp
-Source source: Nguồn gốc của bài báo.
-String title: Tiêu đề của bài báo
-String description: Mô tả bài báo
-String url: Đường dẫn URL đến bài báo đầy đủ.
-String urlToImage: Đường dẫn URL đến hình ảnh minh họa của bài báo, thường được dùng để hiển thị thumbnail trong ứng dụng (có thể null nếu không có ảnh).
- */
+@Entity(tableName = "articles")
 public class Article {
 
-    private Source source;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
     private String title;
-    private String description; // có thể là null
-
+    private String description;
     private String url;
-    @SerializedName("urlToImage")
-    private String urlToImage; // có thể là null
+    private String urlToImage;
 
-    public Article(Source source, String title, String description, String url, String urlToImage) {
-        this.source = source;
-        this.title = title;
-        this.description = description;
-        this.url = url;
-        this.urlToImage = urlToImage;
+    // Trường thêm để quản lý lịch sử
+    private boolean isHistory;
+
+    // Trường thêm để liên kết với người dùng
+    private int userId;
+
+    // Getters và Setters
+    public int getId() {
+        return id;
     }
 
-    public Source getSource() {
-        return source;
-    }
-
-    public void setSource(Source source) {
-        this.source = source;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -68,5 +60,20 @@ public class Article {
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
     }
-}
 
+    public boolean isHistory() {
+        return isHistory;
+    }
+
+    public void setHistory(boolean history) {
+        isHistory = history;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+}

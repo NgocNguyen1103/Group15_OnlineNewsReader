@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -21,28 +22,39 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.concurrent.Executors;
 
-import vn.edu.usth.newsreader.login.AppDatabase;
+import vn.edu.usth.newsreader.db.AppDatabase;
 import vn.edu.usth.newsreader.login.LoginActivity;
 import vn.edu.usth.newsreader.login.User;
-import vn.edu.usth.newsreader.login.UserDao;
+import vn.edu.usth.newsreader.db.UserDao;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavController navController;
     private static final int REQUEST_CALL_PERMISSION = 1;
+
+
     @Override
     protected void onStart() {
         super.onStart();
-        UserDao userDao = AppDatabase.getInstance(this).userDao();
-        User currentUser = userDao.getLoggedInUser();
 
-        if (currentUser == null || !currentUser.isLoggedIn()) {
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            finish(); // Đóng MainActivity nếu người dùng chưa đăng nhập
-        }
+        // Truy vấn người dùng hiện tại từ Room Database
+        Executors.newSingleThreadExecutor().execute(() -> {
+            UserDao userDao = AppDatabase.getInstance(this).userDao();
+            User currentUser = userDao.getLoggedInUser();
+
+            if (currentUser == null || !currentUser.isLoggedIn()) {
+                // Chuyển hướng về LoginActivity nếu chưa đăng nhập
+                runOnUiThread(() -> {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                });
+            }
+        });
     }
+
+
 
 
     @Override
@@ -85,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.nav_thoat) {
                 signOutUser();
             } else if (itemId == R.id.nav_lich_su) {
+                Log.d("MainActivity", "Attempting to navigate to HistoryFragment");
                 navController.navigate(R.id.historyFragment);
             }
 
@@ -118,13 +131,16 @@ public class MainActivity extends AppCompatActivity {
      * Xóa trạng thái đăng nhập trong Room Database và chuyển hướng về LoginActivity.
      */
     private void signOutUser() {
-        AppDatabase db = AppDatabase.getInstance(this);
         Executors.newSingleThreadExecutor().execute(() -> {
-            User currentUser = db.userDao().getLoggedInUser();
+            UserDao userDao = AppDatabase.getInstance(this).userDao();
+            User currentUser = userDao.getLoggedInUser();
+
             if (currentUser != null) {
                 currentUser.setLoggedIn(false); // Cập nhật trạng thái đăng xuất
-                db.userDao().updateUser(currentUser); // Cập nhật vào cơ sở dữ liệu
+                userDao.updateUser(currentUser); // Lưu vào cơ sở dữ liệu
             }
+
+            // Chuyển hướng về LoginActivity
             runOnUiThread(() -> {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
@@ -132,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
             });
         });
     }
+
 
 
     /**
