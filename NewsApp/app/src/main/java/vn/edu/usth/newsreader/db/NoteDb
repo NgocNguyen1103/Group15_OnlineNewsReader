@@ -4,11 +4,11 @@ Vai trò của AppDatabase:
 - Cung cấp DAO: Cho phép truy cập các DAO như ArticleDao và UserDao để thực hiện các thao tác CRUD trên bảng.
 
 Vai trò của ArticleDao:
-- Xử lý bài viết: Chứa các phương thức để thực hiện các thao tác liên quan đến bảng Article (thêm, sửa, xóa, truy vấn bài viết).
+- Xử lý bài viết: Chứa các phương thức để thực hiện các thao tác liên quan đến bảng articles (thêm, sửa, xóa, truy vấn bài viết).
 - Giao tiếp với cơ sở dữ liệu: Chịu trách nhiệm thực hiện các lệnh SQL (query) để thao tác với bảng Article.
 
 Vai trò của UserDao:
-- Xử lý người dùng: Cung cấp các phương thức để thực hiện các thao tác với bảng User (đăng ký, đăng nhập, cập nhật trạng thái đăng nhập).
+- Xử lý người dùng: Cung cấp các phương thức để thực hiện các thao tác với bảng users (đăng ký, đăng nhập, cập nhật trạng thái đăng nhập).
 - Giao tiếp với cơ sở dữ liệu: Thực hiện các lệnh SQL để kiểm tra, thêm, hoặc cập nhật thông tin người dùng trong bảng User.
 
 Vai trò của User:
