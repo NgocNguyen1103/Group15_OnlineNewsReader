@@ -1,19 +1,21 @@
-Cấu trúc của Room Database trong Android được xây dựng theo mô hình ORM (Object-Relational Mapping), cho phép bạn tương tác với cơ sở dữ liệu
-SQLite một cách dễ dàng bằng cách sử dụng các đối tượng Java/Kotlin. Dưới đây là các thành phần chính của Room Database cùng vai trò của chúng:
+Room Database là gì?
+- Room Database là một thư viện được cung cấp bởi Jetpack trong Android, giúp phát triển các ứng dụng với cơ sở dữ liệu SQLite dễ dàng và hiệu quả hơn. Room cung cấp một lớp trừu tượng trên SQLite, đảm bảo bạn có thể truy cập dữ liệu một cách an toàn, đồng thời tận dụng sức mạnh của SQLite mà không cần viết nhiều câu lệnh SQL thủ công.
 
-1. Entity (Bảng trong cơ sở dữ liệu)
-Vai trò:
-Đại diện cho một bảng trong cơ sở dữ liệu.
-Mỗi lớp Entity ánh xạ tới một bảng với các cột tương ứng là các thuộc tính của lớp.
+Lợi ích của Room:
+- Dễ sử dụng hơn SQLite thuần:
++ Không cần viết nhiều mã SQL phức tạp, bạn chỉ cần sử dụng annotations.
++ Hỗ trợ truy vấn dữ liệu dễ dàng thông qua các DAO (Data Access Objects).
 
-2. DAO (Data Access Object)
-Vai trò:
-Định nghĩa các thao tác CRUD (Create, Read, Update, Delete) hoặc truy vấn SQL đối với bảng trong cơ sở dữ liệu.
-Giao tiếp giữa ứng dụng và cơ sở dữ liệu.
+Các thành phần chính của Room:
 
-3. Database Class
-Vai trò:
-Đại diện cho cơ sở dữ liệu tổng thể.
-Là entry point cho Room để truy cập các DAO.
-Kế thừa từ RoomDatabase
+- Entity (@Entity):
++Đại diện cho một bảng trong cơ sở dữ liệu.
++Mỗi cột của bảng được ánh xạ đến một thuộc tính trong lớp.
+
+- DAO (Data Access Object):
++ Là giao diện chứa các phương thức để thực hiện các thao tác CRUD (Create, Read, Update, Delete) hoặc truy vấn dữ liệu.
++ Dùng annotation như @Insert, @Update, @Delete, hoặc @Query.
+
+- Database (@Database):
++Là lớp chính quản lý cơ sở dữ liệu, ánh xạ các Entity và cung cấp truy cập đến các DAO.
 
