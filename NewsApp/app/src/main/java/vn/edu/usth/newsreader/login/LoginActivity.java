@@ -36,21 +36,28 @@ public class LoginActivity extends AppCompatActivity {
             String email = emailEditText.getText().toString();
             String password = passwordEditText.getText().toString();
 
+            // Kiểm tra nếu email và password không rỗng
+            // Sử dụng Executor để xử lý logic trong background thread
+            // Lấy instance của UserDao từ cơ sở dữ liệu
+            // Kiểm tra thông tin đăng nhập bằng cách gọi phương thức login
+            // Nếu đăng nhập thành công, cập nhật trạng thái đăng nhập của người dùng
+            // Chuyển hướng về MainActivity trên luồng chính (UI Thread)
+            // Nếu thông tin đăng nhập không đúng, hiển thị thông báo lỗi trên luồng chính
+            // Nếu email hoặc password bị rỗng, hiển thị thông báo yêu cầu nhập đầy đủ thông tin
+
             if (!email.isEmpty() && !password.isEmpty()) {
                 Executors.newSingleThreadExecutor().execute(() -> {
                     UserDao userDao = AppDatabase.getInstance(this).userDao();
                     User user = userDao.login(email, password);
 
                     if (user != null) {
-                        // Cập nhật trạng thái đăng nhập
-                        user.setLoggedIn(true);
-                        userDao.updateUser(user);
+                        user.setLoggedIn(true); // Đặt trạng thái loggedIn thành true
+                        userDao.updateUser(user);   // Cập nhật lại thông tin người dùng trong cơ sở dữ liệu
 
-                        // Chuyển hướng về MainActivity
                         runOnUiThread(() -> {
                             Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(this, MainActivity.class));
-                            finish();
+                            finish(); // Kết thúc Activity hiện tại để không quay lại màn hình đăng nhập
                         });
                     } else {
                         runOnUiThread(() -> Toast.makeText(this, "Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show());
@@ -60,12 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
-
-
         signUpTextView.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
     }
 }

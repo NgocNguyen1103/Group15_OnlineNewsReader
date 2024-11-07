@@ -1,5 +1,5 @@
 Thứ tự đọc:
-dùng news api, có thể lên web mà xem json nó trả về có dạng như nào
+dùng news api, lên web xem json nó trả về có dạng như nào
 
 1. NewsApiService
 Đóng vai trò giao tiếp với API. Xem lớp này để hiểu các endpoint được sử dụng, cách lấy dữ liệu từ API và các phương thức cần gọi.
@@ -11,9 +11,8 @@ Lớp này thường chứa cấu hình mạng và các cài đặt liên quan n
 3. NewsResponse
 Đây là lớp phản hồi chính từ API. Hiểu lớp này để biết cấu trúc dữ liệu nhận về từ API và cách nó được ánh xạ (mapping) sang các lớp trong ứng dụng.
 
-4. Article và Source
-Lớp con trong phản hồi API (NewsResponse) đại diện cho bài viết (Article) và nguồn thông tin (Source).
-
+4. Article
+Lớp con trong phản hồi API (NewsResponse) đại diện cho bài viết (Article)
 
 5. HomeFragment
 Đây là nơi giao diện người dùng chính hiển thị dữ liệu (ví dụ: danh sách tin tức).

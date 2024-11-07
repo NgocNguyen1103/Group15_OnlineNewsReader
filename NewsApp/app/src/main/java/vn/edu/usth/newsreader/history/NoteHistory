@@ -1,5 +1,7 @@
-HistoryFragment.java: Fragment hiển thị danh sách các bài báo đã đọc của người dùng.
-Sử dụng RecyclerView để hiển thị dữ liệu lịch sử và NewsAdapter để ánh xạ dữ liệu từ HistoryManager.
+Vai trò của HistoryFragment:
+- Giao diện người dùng: Hiển thị danh sách các bài viết đã được lưu trong lịch sử của người dùng thông qua RecyclerView.
+- Liên kết với dữ liệu: Lấy danh sách bài viết từ cơ sở dữ liệu (Room) thông qua HistoryManager và hiển thị chúng.
 
-HistoryManager.java: Lớp quản lý dữ liệu lịch sử đọc, lưu trữ trong SharedPreferences.
-Cung cấp các phương thức để lấy, thêm và xóa lịch sử đọc bằng cách lưu trữ danh sách bài báo dưới dạng JSON với sự hỗ trợ của Gson.
+Vai trò của HistoryManager:
+- Quản lý dữ liệu lịch sử: Xử lý việc thêm bài viết vào lịch sử, kiểm tra bài viết đã tồn tại hay chưa.
+- Kết nối với cơ sở dữ liệu: Sử dụng DAO (Data Access Object) để đọc/ghi dữ liệu lịch sử trong bảng Article.

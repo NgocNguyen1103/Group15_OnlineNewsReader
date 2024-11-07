@@ -1,5 +1,5 @@
 Thứ tự đọc:
-dùng ninja api để lấy quotes, có thể lên web xem api nó trả về json có chứa gì
+dùng ninja api để lấy quotes, lên web xem api nó trả về json có chứa gì
 
 1. QuotesApiService
 Bắt đầu với lớp này để hiểu cách thức giao tiếp với API liên quan đến việc lấy dữ liệu "Quotes" (câu trích dẫn).

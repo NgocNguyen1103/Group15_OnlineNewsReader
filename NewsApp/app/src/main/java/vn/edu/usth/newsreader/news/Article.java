@@ -3,22 +3,36 @@ package vn.edu.usth.newsreader.news;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+// Annotation đánh dấu lớp này là một thực thể (Entity) cho Room Database.
+// Bảng trong cơ sở dữ liệu SQLite sẽ được đặt tên là "articles".
 @Entity(tableName = "articles")
 public class Article {
 
+    // Trường này là khóa chính (Primary Key) cho bảng "articles".
+    // `autoGenerate = true` đảm bảo rằng Room sẽ tự động tăng giá trị ID mỗi khi một bản ghi mới được thêm vào bảng.
     @PrimaryKey(autoGenerate = true)
     private int id;
+
 
     private String title;
     private String description;
     private String url;
     private String urlToImage;
+    private boolean isHistory;    // Trường thêm để quản lý lịch sử
+    private int userId;     // Trường thêm để liên kết với người dùng
 
-    // Trường thêm để quản lý lịch sử
-    private boolean isHistory;
 
-    // Trường thêm để liên kết với người dùng
-    private int userId;
+    /*
+    Room sẽ ánh xạ lớp này thành bảng SQL như sau
+    CREATE TABLE articles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, -- Khóa chính, tự động tăng
+            title TEXT,                          -- Tiêu đề bài báo
+                    description TEXT,                    -- Mô tả bài báo
+                    url TEXT,                            -- URL bài báo
+                    isHistory INTEGER,                   -- Cột lưu trạng thái "Lịch sử"
+                    userId INTEGER                       -- ID người dùng liên kết bài báo
+    );
+*/
 
     // Getters và Setters
     public int getId() {

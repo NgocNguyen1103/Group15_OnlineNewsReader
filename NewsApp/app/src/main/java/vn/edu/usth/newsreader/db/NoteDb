@@ -1,26 +1,35 @@
-1. AppDatabase (Lớp chính của Room Database)
-- Vai trò: Là lớp cốt lõi của Room Database, chịu trách nhiệm tạo và quản lý cơ sở dữ liệu trong ứng dụng.
-- Chức năng:
-+ Cung cấp truy cập tới các DAO (Data Access Objects) thông qua các phương thức như userDao() và articleDao().
-+ Quản lý phiên bản và cấu hình của cơ sở dữ liệu (ví dụ: tên database, migrations, etc.).
-Liên quan đến: Đây là nơi khởi tạo và kết nối các DAO để sử dụng trong ứng dụng.
+Vai trò của AppDatabase:
+- Quản lý cơ sở dữ liệu: Là lớp chính đại diện cho cơ sở dữ liệu SQLite của ứng dụng.
+- Singleton: Đảm bảo chỉ tạo một instance duy nhất của cơ sở dữ liệu để sử dụng xuyên suốt ứng dụng.
+- Cung cấp DAO: Cho phép truy cập các DAO như ArticleDao và UserDao để thực hiện các thao tác CRUD trên bảng.
 
-2. ArticleDao (DAO dành cho các bài báo)
-- Vai trò: Chịu trách nhiệm truy vấn dữ liệu liên quan đến bài báo từ cơ sở dữ liệu.
-- Chức năng chính:
-+ Truy vấn danh sách các bài báo trong lịch sử (getHistoryArticles).
-+ Lưu hoặc cập nhật thông tin bài báo (insertArticle, updateArticle).
-+ Lấy bài báo theo URL và userId (getArticleByUrl).
-Liên quan đến: Được sử dụng bởi các tính năng như lịch sử đọc bài báo.
+Vai trò của ArticleDao:
+- Xử lý bài viết: Chứa các phương thức để thực hiện các thao tác liên quan đến bảng Article (thêm, sửa, xóa, truy vấn bài viết).
+- Giao tiếp với cơ sở dữ liệu: Chịu trách nhiệm thực hiện các lệnh SQL (query) để thao tác với bảng Article.
 
-3. UserDao (DAO dành cho người dùng)
-- Vai trò: Quản lý việc truy cập dữ liệu liên quan đến người dùng.
-- Chức năng chính:
-+ Lấy thông tin người dùng đang đăng nhập (getLoggedInUser).
-+ Thực hiện kiểm tra đăng nhập (login).
-+ Thêm hoặc cập nhật thông tin người dùng (insertUser, updateUser).
-Liên quan đến: Được sử dụng cho các chức năng đăng nhập, đăng ký, và kiểm tra phiên đăng nhập.
+Vai trò của UserDao:
+- Xử lý người dùng: Cung cấp các phương thức để thực hiện các thao tác với bảng User (đăng ký, đăng nhập, cập nhật trạng thái đăng nhập).
+- Giao tiếp với cơ sở dữ liệu: Thực hiện các lệnh SQL để kiểm tra, thêm, hoặc cập nhật thông tin người dùng trong bảng User.
 
-4. Conclusion:
-- AppDatabase là trung tâm, giúp liên kết các DAO (ArticleDao và UserDao) với cơ sở dữ liệu.
-- ArticleDao và UserDao thực hiện các thao tác cụ thể với dữ liệu (CRUD) thông qua AppDatabase.
+Vai trò của User:
+- Mô hình dữ liệu người dùng: Đại diện cho bảng users trong cơ sở dữ liệu, chứa các thông tin của người dùng như id, email, password, và trạng thái đăng nhập (isLoggedIn).
+- Entity của Room: Được Room sử dụng để ánh xạ dữ liệu từ bảng users thành đối tượng Java, giúp dễ dàng thao tác.
+- Trạng thái đăng nhập: Lưu trữ thông tin người dùng có đang đăng nhập hay không, hỗ trợ các chức năng như đăng nhập, đăng ký.
+
+Vai trò của Article:
+- Mô hình dữ liệu bài viết: Đại diện cho bảng articles trong cơ sở dữ liệu, chứa thông tin về bài viết như id, title, url, và trạng thái lưu lịch sử.
+- Entity của Room: Được Room sử dụng để ánh xạ dữ liệu từ bảng articles thành đối tượng Java.
+- Quản lý lịch sử: Có cột isHistory để đánh dấu bài viết đã được lưu vào lịch sử của người dùng, giúp hỗ trợ tính năng lịch sử bài viết.
+
++--------------------+
+|    AppDatabase     |
+|--------------------|
+| - User (Entity)    | <--- ánh xạ thành bảng `users`
+| - Article (Entity) | <--- ánh xạ thành bảng `articles`
+| - UserDao          | <--- quản lý truy vấn bảng `users` , Là cầu nối giữa AppDatabase và bảng users.
+| - ArticleDao       | <--- quản lý truy vấn bảng `articles`, Là cầu nối giữa AppDatabase và bảng articles.
++--------------------+
+        |
+        |
++--------------------+
+| User & Article     | <--- Các đối tượng Java (model dữ liệu)
