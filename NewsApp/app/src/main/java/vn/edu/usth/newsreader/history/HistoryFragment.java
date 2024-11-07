@@ -42,7 +42,8 @@ public class HistoryFragment extends Fragment {
             int userId = AppDatabase.getInstance(requireContext()).userDao().getLoggedInUser().getId();
             List<Article> historyArticles = new HistoryManager(requireContext(), userId).getHistoryArticles();
             requireActivity().runOnUiThread(() -> {
-                adapter = new NewsAdapter(requireContext(), historyArticles);
+                adapter = new NewsAdapter(requireContext(), historyArticles, userId);
+
                 recyclerView.setAdapter(adapter);
             });
         });

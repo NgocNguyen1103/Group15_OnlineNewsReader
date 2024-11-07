@@ -12,14 +12,13 @@ public class Article {
     // `autoGenerate = true` đảm bảo rằng Room sẽ tự động tăng giá trị ID mỗi khi một bản ghi mới được thêm vào bảng.
     @PrimaryKey(autoGenerate = true)
     private int id;
-
-
     private String title;
     private String description;
     private String url;
     private String urlToImage;
     private boolean isHistory;    // Trường thêm để quản lý lịch sử
     private int userId;     // Trường thêm để liên kết với người dùng
+    private boolean isBookmarked; // Dùng cho Bookmark
 
 
     /*
@@ -89,5 +88,14 @@ public class Article {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    // Getters và Setters
+    public boolean isBookmarked() {
+        return isBookmarked;
+    }
+
+    public void setBookmarked(boolean bookmark) {
+        isBookmarked = bookmark;
     }
 }

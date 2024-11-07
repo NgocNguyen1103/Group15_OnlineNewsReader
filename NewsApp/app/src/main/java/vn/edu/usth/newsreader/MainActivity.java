@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.nav_lich_su) {
                 Log.d("MainActivity", "Attempting to navigate to HistoryFragment");
                 navController.navigate(R.id.historyFragment);
+            }   else if (itemId == R.id.nav_bookmark) {
+                navController.navigate(R.id.bookmarkFragment);
             }
 
             // Đóng Navigation Drawer sau khi chọn
