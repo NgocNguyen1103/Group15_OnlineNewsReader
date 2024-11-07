@@ -24,6 +24,10 @@
         android:name="vn.edu.usth.newsreader.history.HistoryFragment"
         android:label="History"
         tools:layout="@layout/fragment_history" />
-
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="vn.edu.usth.newsreader.bookmark.BookmarkFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_bookmark" />
 
 </navigation>
