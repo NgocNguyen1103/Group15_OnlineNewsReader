@@ -3,6 +3,8 @@ package vn.edu.usth.newsreader.news;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +20,14 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import vn.edu.usth.newsreader.R;
+import vn.edu.usth.newsreader.db.AppDatabase;
+import vn.edu.usth.newsreader.login.User;
 
 public class NewsFragment extends Fragment {
 
@@ -45,34 +51,70 @@ public class NewsFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Khởi tạo adapter một lần duy nhất
-        newsAdapter = new NewsAdapter(requireContext(), articles);
-        recyclerView.setAdapter(newsAdapter);
+        // Lấy userId trong background thread
+        Executors.newSingleThreadExecutor().execute(() -> {
+            AppDatabase database = AppDatabase.getInstance(requireContext());
+            User loggedInUser = database.userDao().getLoggedInUser();
+
+            // Kiểm tra nếu loggedInUser là null
+            if (loggedInUser != null) {
+                int userId = loggedInUser.getId(); // Lấy userId từ cơ sở dữ liệu
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    newsAdapter = new NewsAdapter(requireContext(), articles, userId);
+                    recyclerView.setAdapter(newsAdapter);
+                });
+            } else {
+                // Xử lý trường hợp không có người dùng đăng nhập
+                Log.e("NewsFragment", "No logged-in user found.");
+                // Bạn có thể hiển thị thông báo hoặc thực hiện hành động khác ở đây
+            }
+        });
+
 
         swipeRefreshLayout.setOnRefreshListener(this::fetchNews);
 
         fetchNews(); // Gọi hàm fetchNews() để tải dữ liệu ngay khi Fragment được tạo
     }
 
+
     private void fetchNews() {
         swipeRefreshLayout.setRefreshing(true); // Hiển thị biểu tượng làm mới
 
         NewsApiService apiService = NewsApiClient.getInstance().create(NewsApiService.class);
-        Call<NewsResponse> call = apiService.getTopHeadlines("techcrunch","d2b1e0d9b6794535ab91504cd3b6dcb4" );
+        Call<NewsResponse> call = apiService.getTopHeadlines("techcrunch", "d2b1e0d9b6794535ab91504cd3b6dcb4");
 
         call.enqueue(new Callback<NewsResponse>() {
             @Override
             public void onResponse(@NonNull Call<NewsResponse> call, @NonNull Response<NewsResponse> response) {
                 if (response.isSuccessful() && response.body() != null && response.body().getArticles() != null) {
-                    Log.d("NewsResponse", "API Response: " +  new Gson().toJson(response.body()));
 
                     articles.clear(); // Xóa dữ liệu cũ
                     articles.addAll(response.body().getArticles()); // Thêm dữ liệu mới
-                    // In log URL của ảnh để kiểm tra
-                    for (Article article : articles) {
-                        Log.d("NewsResponse", "Image URL: " + article.getUrlToImage());
-                    }
-                    newsAdapter.notifyDataSetChanged(); // Cập nhật UI
+
+                    // Lấy userId và cập nhật trạng thái bookmark từ cơ sở dữ liệu
+                    Executors.newSingleThreadExecutor().execute(() -> {
+                        AppDatabase database = AppDatabase.getInstance(requireContext());
+                        User loggedInUser = database.userDao().getLoggedInUser();
+
+                        if (loggedInUser != null) {
+                            int userId = loggedInUser.getId();
+
+                            for (Article article : articles) {
+                                Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
+                                if (dbArticle != null) {
+                                    article.setBookmarked(dbArticle.isBookmarked());
+                                }
+                            }
+
+                            new Handler(Looper.getMainLooper()).post(() -> {
+                                newsAdapter.notifyDataSetChanged();
+                            });
+                        } else {
+                            Log.e("NewsFragment", "No logged-in user found.");
+                            // Xử lý khi không có người dùng đăng nhập
+                        }
+                    });
+
                 } else {
                     Toast.makeText(requireContext(), "Failed to load news", Toast.LENGTH_SHORT).show();
                 }
@@ -87,6 +129,6 @@ public class NewsFragment extends Fragment {
                 swipeRefreshLayout.setRefreshing(false); // Tắt biểu tượng làm mới
             }
         });
-
     }
+
 }

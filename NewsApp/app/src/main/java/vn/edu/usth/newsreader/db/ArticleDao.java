@@ -1,5 +1,6 @@
 package vn.edu.usth.newsreader.db;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -35,6 +36,10 @@ public interface ArticleDao {
     // Phương thức này giúp kiểm tra xem bài báo đã tồn tại trong cơ sở dữ liệu hay chưa.
     @Query("SELECT * FROM articles WHERE url = :url AND userId = :userId")
     Article getArticleByUrl(String url, int userId);
+
+    @Query("SELECT * FROM articles WHERE userId = :userId AND isBookmarked = 1")
+    List<Article> getBookmarkedArticles(int userId); // Trả về List<Article> thay vì LiveData<List<Article>>
+
 }
 
 

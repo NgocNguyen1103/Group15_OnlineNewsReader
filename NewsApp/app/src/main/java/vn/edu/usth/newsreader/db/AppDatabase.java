@@ -11,7 +11,7 @@ import vn.edu.usth.newsreader.news.Article;
 // Annotation @Database khai báo lớp này là một cơ sở dữ liệu Room
 // - entities: Danh sách các lớp Entity đại diện cho các bảng trong cơ sở dữ liệu (Article, User).
 // - version: Phiên bản cơ sở dữ liệu, tăng lên 2 khi có thay đổi cấu trúc.
-@Database(entities = {Article.class, User.class}, version = 2) // Tăng version lên 2
+@Database(entities = {Article.class, User.class}, version = 4) // Tăng version lên 2
 public abstract class AppDatabase extends RoomDatabase {
     // Biến tĩnh để lưu trữ một instance duy nhất của AppDatabase (Singleton pattern).
     // Phương thức trừu tượng trả về DAO để thao tác với bảng Article.
