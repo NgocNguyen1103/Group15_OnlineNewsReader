@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.newsreader.R;
 
-public class DetailActivity extends AppCompatActivity {
+public class aDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
