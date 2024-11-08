@@ -14,11 +14,12 @@
         <LinearLayout
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:background="#B9D3EE"
+            android:background="@drawable/round_button"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            >
 
             <ImageView
                 android:id="@+id/gameImage1"
@@ -32,16 +33,18 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
 
                 <TextView
                     android:layout_marginTop="20dp"
                     android:id="@+id/gameName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Turbo Race 3D"
+                    android:text="Turbo Race 3D"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
                 <Button
                     android:id="@+id/playButton1"
@@ -56,7 +59,7 @@
         <!-- Game 2 -->
         <LinearLayout
             android:layout_margin="10dp"
-            android:background="#B9D3EE"
+            android:background="@drawable/round_button"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,16 +79,18 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
 
                 <TextView
                     android:id="@+id/gameName2"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Color maze"
+                    android:text="Color maze"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
                 <Button
                     android:id="@+id/playButton2"
@@ -99,7 +104,7 @@
         <!-- Game 2 -->
         <LinearLayout
             android:layout_margin="10dp"
-            android:background="#B9D3EE"
+            android:background="@drawable/round_button"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,7 +124,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
 
                 <TextView
                     android:layout_marginTop="20dp"
@@ -128,7 +134,8 @@
                     android:layout_height="wrap_content"
                     android:text="Stickman"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
                 <Button
                     android:id="@+id/playButton3"
@@ -141,7 +148,7 @@
         <LinearLayout
 
             android:layout_margin="10dp"
-            android:background="#B9D3EE"
+            android:background="@drawable/round_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -160,7 +167,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
 
                 <TextView
                     android:layout_marginTop="20dp"
@@ -169,7 +177,8 @@
                     android:layout_height="wrap_content"
                     android:text="Feed lion"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
                 <Button
                     android:id="@+id/playButton4"
