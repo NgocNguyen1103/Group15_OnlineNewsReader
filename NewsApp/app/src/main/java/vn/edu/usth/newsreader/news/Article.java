@@ -22,7 +22,7 @@ public class Article {
 
 
     /*
-    Room sẽ ánh xạ lớp này thành bảng SQL như sau
+    Room sẽ ánh xạ(mapping) lớp này thành bảng SQL như sau
     CREATE TABLE articles (
             id INTEGER PRIMARY KEY AUTOINCREMENT, -- Khóa chính, tự động tăng
             title TEXT,                          -- Tiêu đề bài báo
