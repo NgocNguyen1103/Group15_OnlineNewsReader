@@ -50,19 +50,6 @@
                 android:drawablePadding="8dp"/>
 <!--                android:background="@drawable/edittext_bkg"/>-->
 
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:id="@+id/signup_confirm"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_password_24"
-                android:drawablePadding="8dp"/>
-<!--                android:background="@drawable/edittext_bkg"/>-->
-
             <Button
                 android:layout_width="300dp"
                 android:layout_height="70dp"
