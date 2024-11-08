@@ -23,7 +23,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:src="@drawable/logo_news"/>
+                android:src="@drawable/signup_logo"/>
 
             <EditText
                 android:layout_width="300dp"
