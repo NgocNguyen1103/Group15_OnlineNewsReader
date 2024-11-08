@@ -27,6 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import vn.edu.usth.newsreader.R;
 import vn.edu.usth.newsreader.db.AppDatabase;
+import vn.edu.usth.newsreader.login.User;
 
 public class NewsFragment extends Fragment {
 
@@ -53,20 +54,28 @@ public class NewsFragment extends Fragment {
         // Lấy userId trong background thread
         Executors.newSingleThreadExecutor().execute(() -> {
             AppDatabase database = AppDatabase.getInstance(requireContext());
-            int userId = database.userDao().getLoggedInUser().getId(); // Lấy userId từ cơ sở dữ liệu
+            User loggedInUser = database.userDao().getLoggedInUser(); // Lấy người dùng đang đăng nhập
 
-            // Chuyển về Main Thread để khởi tạo adapter và gắn vào RecyclerView
-            new Handler(Looper.getMainLooper()).post(() -> {
-                newsAdapter = new NewsAdapter(requireContext(), articles, userId);
-                recyclerView.setAdapter(newsAdapter);
-            });
+            if (loggedInUser != null) {
+                int userId = loggedInUser.getId(); // Lấy userId từ cơ sở dữ liệu
+
+                // Chuyển về Main Thread để khởi tạo adapter và gắn vào RecyclerView
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    newsAdapter = new NewsAdapter(requireContext(), articles, userId);
+                    recyclerView.setAdapter(newsAdapter);
+                });
+            } else {
+                // Chuyển về Main Thread để hiển thị thông báo lỗi
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    Toast.makeText(requireContext(), "No user logged in. Please log in first.", Toast.LENGTH_SHORT).show();
+                });
+            }
         });
 
         swipeRefreshLayout.setOnRefreshListener(this::fetchNews);
 
         fetchNews(); // Gọi hàm fetchNews() để tải dữ liệu ngay khi Fragment được tạo
     }
-
 
     private void fetchNews() {
         swipeRefreshLayout.setRefreshing(true); // Hiển thị biểu tượng làm mới
@@ -85,12 +94,15 @@ public class NewsFragment extends Fragment {
                     // Lấy userId và cập nhật trạng thái bookmark từ cơ sở dữ liệu
                     Executors.newSingleThreadExecutor().execute(() -> {
                         AppDatabase database = AppDatabase.getInstance(requireContext());
-                        int userId = database.userDao().getLoggedInUser().getId();
+                        User loggedInUser = database.userDao().getLoggedInUser();
 
-                        for (Article article : articles) {
-                            Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
-                            if (dbArticle != null) {
-                                article.setBookmarked(dbArticle.isBookmarked());
+                        if (loggedInUser != null) {
+                            int userId = loggedInUser.getId();
+                            for (Article article : articles) {
+                                Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
+                                if (dbArticle != null) {
+                                    article.setBookmarked(dbArticle.isBookmarked());
+                                }
                             }
                         }
 
