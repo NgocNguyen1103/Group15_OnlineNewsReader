@@ -19,14 +19,20 @@
             android:orientation="vertical"
             android:padding="12dp"
             android:background="#B9D3EE">
-
+            <ImageView
+                android:id="@+id/newsImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_image" />
             <!-- Tiêu đề tin tức -->
             <TextView
                 android:id="@+id/newsTitle"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="25sp"
+                android:textSize="27sp"
                 android:textColor="@android:color/black"
                 android:maxLines="2"
                 android:ellipsize="end"
@@ -37,41 +43,43 @@
                 android:id="@+id/newsDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textColor="@android:color/black"
                 android:maxLines="3"
                 android:ellipsize="end"
                 android:paddingBottom="4dp" />
 
             <!-- Nguồn tin tức -->
-            <TextView
-                android:id="@+id/newsSource"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:textColor="@android:color/darker_gray"
-                android:paddingBottom="8dp" />
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/newsSource"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:paddingBottom="8dp" />
 
-            <!-- Hình ảnh tin tức -->
-            <ImageView
-                android:id="@+id/newsImage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rounded_image" />
+                <!-- Hình ảnh tin tức -->
+
+                <ImageButton
+                    android:id="@+id/bookmarkButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_bookmark_0"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 
         <!-- Nút Bookmark đặt ở góc trên cùng phải -->
-        <ImageButton
-            android:id="@+id/bookmarkButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="top|end"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/baseline_bookmark_0"
-        />
+
 
     </FrameLayout>
 
