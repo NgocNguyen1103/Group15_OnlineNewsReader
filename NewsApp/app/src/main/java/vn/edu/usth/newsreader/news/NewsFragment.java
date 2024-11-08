@@ -27,6 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import vn.edu.usth.newsreader.R;
 import vn.edu.usth.newsreader.db.AppDatabase;
+import vn.edu.usth.newsreader.login.User;
 
 public class NewsFragment extends Fragment {
 
@@ -53,14 +54,22 @@ public class NewsFragment extends Fragment {
         // Lấy userId trong background thread
         Executors.newSingleThreadExecutor().execute(() -> {
             AppDatabase database = AppDatabase.getInstance(requireContext());
-            int userId = database.userDao().getLoggedInUser().getId(); // Lấy userId từ cơ sở dữ liệu
+            User loggedInUser = database.userDao().getLoggedInUser();
 
-            // Chuyển về Main Thread để khởi tạo adapter và gắn vào RecyclerView
-            new Handler(Looper.getMainLooper()).post(() -> {
-                newsAdapter = new NewsAdapter(requireContext(), articles, userId);
-                recyclerView.setAdapter(newsAdapter);
-            });
+            // Kiểm tra nếu loggedInUser là null
+            if (loggedInUser != null) {
+                int userId = loggedInUser.getId(); // Lấy userId từ cơ sở dữ liệu
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    newsAdapter = new NewsAdapter(requireContext(), articles, userId);
+                    recyclerView.setAdapter(newsAdapter);
+                });
+            } else {
+                // Xử lý trường hợp không có người dùng đăng nhập
+                Log.e("NewsFragment", "No logged-in user found.");
+                // Bạn có thể hiển thị thông báo hoặc thực hiện hành động khác ở đây
+            }
         });
+
 
         swipeRefreshLayout.setOnRefreshListener(this::fetchNews);
 
@@ -85,20 +94,27 @@ public class NewsFragment extends Fragment {
                     // Lấy userId và cập nhật trạng thái bookmark từ cơ sở dữ liệu
                     Executors.newSingleThreadExecutor().execute(() -> {
                         AppDatabase database = AppDatabase.getInstance(requireContext());
-                        int userId = database.userDao().getLoggedInUser().getId();
+                        User loggedInUser = database.userDao().getLoggedInUser();
 
-                        for (Article article : articles) {
-                            Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
-                            if (dbArticle != null) {
-                                article.setBookmarked(dbArticle.isBookmarked());
+                        if (loggedInUser != null) {
+                            int userId = loggedInUser.getId();
+
+                            for (Article article : articles) {
+                                Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
+                                if (dbArticle != null) {
+                                    article.setBookmarked(dbArticle.isBookmarked());
+                                }
                             }
-                        }
 
-                        // Cập nhật giao diện trên Main Thread
-                        new Handler(Looper.getMainLooper()).post(() -> {
-                            newsAdapter.notifyDataSetChanged(); // Cập nhật UI
-                        });
+                            new Handler(Looper.getMainLooper()).post(() -> {
+                                newsAdapter.notifyDataSetChanged();
+                            });
+                        } else {
+                            Log.e("NewsFragment", "No logged-in user found.");
+                            // Xử lý khi không có người dùng đăng nhập
+                        }
                     });
+
                 } else {
                     Toast.makeText(requireContext(), "Failed to load news", Toast.LENGTH_SHORT).show();
                 }
