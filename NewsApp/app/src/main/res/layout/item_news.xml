@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="12dp"
-            android:background="@color/colorGray">
+            android:background="#B9D3EE">
 
             <!-- Tiêu đề tin tức -->
             <TextView
@@ -26,7 +26,7 @@
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textColor="@android:color/black"
                 android:maxLines="2"
                 android:ellipsize="end"

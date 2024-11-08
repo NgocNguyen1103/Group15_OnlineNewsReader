@@ -12,8 +12,9 @@
 
         <!-- Game 1 -->
         <LinearLayout
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
+            android:background="#B9D3EE"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -21,10 +22,12 @@
 
             <ImageView
                 android:id="@+id/gameImage1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="150dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="100dp"
                 android:src="@drawable/game1"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -32,10 +35,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginTop="20dp"
                     android:id="@+id/gameName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" bra"
+                    android:text=" Turbo Race 3D"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -51,8 +55,9 @@
 
         <!-- Game 2 -->
         <LinearLayout
-            android:layout_margin="30dp"
-
+            android:layout_margin="10dp"
+            android:background="#B9D3EE"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -60,9 +65,11 @@
             android:paddingBottom="16dp">
 
             <ImageView
+                android:layout_marginTop="10dp"
                 android:id="@+id/gameImage2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:src="@drawable/game2"
                 android:layout_marginEnd="16dp"/>
 
@@ -73,6 +80,7 @@
 
                 <TextView
                     android:id="@+id/gameName2"
+                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Color maze"
@@ -90,7 +98,8 @@
         <!-- Game 3 và Game 4 có cấu trúc tương tự -->
         <!-- Game 2 -->
         <LinearLayout
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
+            android:background="#B9D3EE"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,10 +109,12 @@
 
             <ImageView
                 android:id="@+id/gameImage3"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/game3"
-                android:layout_marginEnd="16dp"/>
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/game3" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -111,6 +122,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginTop="20dp"
                     android:id="@+id/gameName3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,8 +139,9 @@
         </LinearLayout>
         <!-- Game 2 -->
         <LinearLayout
-            android:layout_margin="30dp"
 
+            android:layout_margin="10dp"
+            android:background="#B9D3EE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -137,10 +150,12 @@
 
             <ImageView
                 android:id="@+id/gameImage4"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/game4"
-                android:layout_marginEnd="16dp"/>
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/game4" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -148,6 +163,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_marginTop="20dp"
                     android:id="@+id/gameName4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -161,6 +177,45 @@
                     android:layout_height="wrap_content"
                     android:text="Play" />
             </LinearLayout>
+<!--            <LinearLayout-->
+
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="#B9D3EE"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingBottom="16dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/gameImage4"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:src="@drawable/game4" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:id="@+id/gameName4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Feed lion"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/playButton4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Play" />-->
+<!--                </LinearLayout>-->
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
