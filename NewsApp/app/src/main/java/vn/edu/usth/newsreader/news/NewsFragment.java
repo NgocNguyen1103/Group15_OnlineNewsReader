@@ -54,28 +54,28 @@ public class NewsFragment extends Fragment {
         // Lấy userId trong background thread
         Executors.newSingleThreadExecutor().execute(() -> {
             AppDatabase database = AppDatabase.getInstance(requireContext());
-            User loggedInUser = database.userDao().getLoggedInUser(); // Lấy người dùng đang đăng nhập
+            User loggedInUser = database.userDao().getLoggedInUser();
 
+            // Kiểm tra nếu loggedInUser là null
             if (loggedInUser != null) {
                 int userId = loggedInUser.getId(); // Lấy userId từ cơ sở dữ liệu
-
-                // Chuyển về Main Thread để khởi tạo adapter và gắn vào RecyclerView
                 new Handler(Looper.getMainLooper()).post(() -> {
                     newsAdapter = new NewsAdapter(requireContext(), articles, userId);
                     recyclerView.setAdapter(newsAdapter);
                 });
             } else {
-                // Chuyển về Main Thread để hiển thị thông báo lỗi
-                new Handler(Looper.getMainLooper()).post(() -> {
-                    Toast.makeText(requireContext(), "No user logged in. Please log in first.", Toast.LENGTH_SHORT).show();
-                });
+                // Xử lý trường hợp không có người dùng đăng nhập
+                Log.e("NewsFragment", "No logged-in user found.");
+                // Bạn có thể hiển thị thông báo hoặc thực hiện hành động khác ở đây
             }
         });
+
 
         swipeRefreshLayout.setOnRefreshListener(this::fetchNews);
 
         fetchNews(); // Gọi hàm fetchNews() để tải dữ liệu ngay khi Fragment được tạo
     }
+
 
     private void fetchNews() {
         swipeRefreshLayout.setRefreshing(true); // Hiển thị biểu tượng làm mới
@@ -98,19 +98,23 @@ public class NewsFragment extends Fragment {
 
                         if (loggedInUser != null) {
                             int userId = loggedInUser.getId();
+
                             for (Article article : articles) {
                                 Article dbArticle = database.articleDao().getArticleByUrl(article.getUrl(), userId);
                                 if (dbArticle != null) {
                                     article.setBookmarked(dbArticle.isBookmarked());
                                 }
                             }
-                        }
 
-                        // Cập nhật giao diện trên Main Thread
-                        new Handler(Looper.getMainLooper()).post(() -> {
-                            newsAdapter.notifyDataSetChanged(); // Cập nhật UI
-                        });
+                            new Handler(Looper.getMainLooper()).post(() -> {
+                                newsAdapter.notifyDataSetChanged();
+                            });
+                        } else {
+                            Log.e("NewsFragment", "No logged-in user found.");
+                            // Xử lý khi không có người dùng đăng nhập
+                        }
                     });
+
                 } else {
                     Toast.makeText(requireContext(), "Failed to load news", Toast.LENGTH_SHORT).show();
                 }
